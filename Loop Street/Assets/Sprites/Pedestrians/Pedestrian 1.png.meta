@@ -110,253 +110,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1_0
+      name: Pedestrian 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 945
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1326efbb359914aa25884649a29766
-      internalID: 401528006
+      spriteID: 8a33a17b88a3470469ebdb08e9499acc
+      internalID: 1577667328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_1
+      name: Pedestrian 1_1
       rect:
         serializedVersion: 2
         x: 236
         y: 945
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c535b8effb410d45a4aa6b80a760a24
-      internalID: 1758895559
+      spriteID: e61bd232d14cc8843be1d3252bd55588
+      internalID: -1127857986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_2
+      name: Pedestrian 1_2
       rect:
         serializedVersion: 2
         x: 472
         y: 945
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02e9ccadfd3cfb64a8efc86b481574ae
-      internalID: -1593653215
+      spriteID: dd3af20e0d66c484da3ce953e62cd428
+      internalID: 1859401334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_3
+      name: Pedestrian 1_3
       rect:
         serializedVersion: 2
         x: 708
         y: 945
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 765e74eaef5317647b5cbc3708bcd87d
-      internalID: -950037314
+      spriteID: d8528d43e194ef64eb6f5fb0199d9f3a
+      internalID: 38794720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_4
+      name: Pedestrian 1_4
       rect:
         serializedVersion: 2
         x: 0
         y: 473
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a80e1ed9792820b429d3df7a5aad3d43
-      internalID: -906669182
+      spriteID: a0752efaeb2792449a4a7abf1ab62715
+      internalID: 1645381440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_5
+      name: Pedestrian 1_5
       rect:
         serializedVersion: 2
         x: 236
         y: 473
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ca41765891dc14c8f3709d52f5d813
-      internalID: -312074712
+      spriteID: 487b4b82e6a532f4f95a0300e0724521
+      internalID: -2060990553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_6
+      name: Pedestrian 1_6
       rect:
         serializedVersion: 2
         x: 472
         y: 473
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e83d661d4cc65641ba42465ad4b8006
-      internalID: 1649058794
+      spriteID: e2f2304e5d2235a4292df87256b9df34
+      internalID: -662659372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_7
+      name: Pedestrian 1_7
       rect:
         serializedVersion: 2
         x: 708
         y: 473
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d17754e740da0c04c9a05d1c377f4ee7
-      internalID: 1321613042
+      spriteID: 581893bcdbb1220478aa021fbef0519c
+      internalID: -1636728924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_8
+      name: Pedestrian 1_8
       rect:
         serializedVersion: 2
         x: 0
         y: 1
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b998fdedfe8e63449b20598b98f6b980
-      internalID: -1164107844
+      spriteID: e135ce8c36ec54444986793a9bde3bd1
+      internalID: 274179848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_9
+      name: Pedestrian 1_9
       rect:
         serializedVersion: 2
         x: 236
         y: 1
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4777212de83956742991edd52ee55bd9
-      internalID: 14321362
+      spriteID: 9c149e425b3e59f40a7205c563ff6bd8
+      internalID: -375481578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_10
+      name: Pedestrian 1_10
       rect:
         serializedVersion: 2
         x: 472
         y: 1
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3464762225f45244a4486d48ba4b0e6
-      internalID: -38622271
+      spriteID: 16a784178f0e081499d2a77a38635933
+      internalID: -518284693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1_11
+      name: Pedestrian 1_11
       rect:
         serializedVersion: 2
         x: 708
         y: 1
         width: 236
         height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d2ae7ca8e4b66f439fb6a69c9280646
-      internalID: 1179333478
+      spriteID: 4f5d0ad548b013545b0df1796cfe451c
+      internalID: -1121782121
       vertices: []
       indices: 
       edges: []
@@ -372,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1_0: 401528006
-      1_1: 1758895559
-      1_10: -38622271
-      1_11: 1179333478
-      1_2: -1593653215
-      1_3: -950037314
-      1_4: -906669182
-      1_5: -312074712
-      1_6: 1649058794
-      1_7: 1321613042
-      1_8: -1164107844
-      1_9: 14321362
+      Pedestrian 1_0: 1577667328
+      Pedestrian 1_1: -1127857986
+      Pedestrian 1_10: -518284693
+      Pedestrian 1_11: -1121782121
+      Pedestrian 1_2: 1859401334
+      Pedestrian 1_3: 38794720
+      Pedestrian 1_4: 1645381440
+      Pedestrian 1_5: -2060990553
+      Pedestrian 1_6: -662659372
+      Pedestrian 1_7: -1636728924
+      Pedestrian 1_8: 274179848
+      Pedestrian 1_9: -375481578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
