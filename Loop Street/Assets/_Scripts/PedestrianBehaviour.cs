@@ -8,19 +8,28 @@ using UnityEngine.Splines;
 public class PedestrianBehaviour : MonoBehaviour
 {
     [SerializeField] private SplineContainer _splineToFollow;
-
     [SerializeField] private float _rotationIntensity;
 
-    [SerializeField] private float _size;
     private SplineAnimate _splineAnimate;
     private Animator _walkAnimator;
     private Vector2 _previousPosition;
 
-    private float _startingY;
-
     void Awake()
     {
-        _splineToFollow = GameObject.Find("Spline 1").GetComponent<SplineContainer>();
+        int randomNumber = Random.Range(0, 3);
+        if (randomNumber == 0)
+        {
+            _splineToFollow = GameObject.Find("Spline 1").GetComponent<SplineContainer>();
+        }
+        else if (randomNumber == 1)
+        {
+            _splineToFollow = GameObject.Find("Spline 2").GetComponent<SplineContainer>();
+        }
+        else if (randomNumber == 2)
+        {
+            _splineToFollow = GameObject.Find("Spline 3").GetComponent<SplineContainer>();
+        }
+
         _splineAnimate = GetComponent<SplineAnimate>();
         _splineAnimate.Container = _splineToFollow;
         _splineAnimate.Play();
@@ -34,10 +43,6 @@ public class PedestrianBehaviour : MonoBehaviour
 
     private void Update()
     {
-        // create depth illusion
-        float currentY = transform.position.y;
-        transform.localScale = new Vector2(_size * (- currentY), _size * (- currentY));
-
         // rotate player slightly to the left and right of the screen
         float currentX = transform.position.x;
         transform.rotation = Quaternion.Euler(0, 0, -currentX * _rotationIntensity);
@@ -73,5 +78,10 @@ public class PedestrianBehaviour : MonoBehaviour
         }
 
         _previousPosition = currentPosition;
+    }
+
+    public void SetSize(float size)
+    {
+        transform.localScale = new Vector3(size, size, size);
     }
 }
