@@ -38,8 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 3957475625
+  - name: Sky
+    uniqueID: 2476878653
+    locked: 0
+  - name: Street
+    uniqueID: 1960439233
+    locked: 0
+  - name: Houses
+    uniqueID: 2489616857
     locked: 0
   - name: Default
     uniqueID: 0
