@@ -1,13 +1,12 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Splines;
 
-[RequireComponent(typeof(SplineAnimate))]
 public class PedestrianBehaviour : MonoBehaviour
 {
-    [SerializeField] private SplineContainer _splineToFollow;
     [SerializeField] private float _rotationIntensity;
 
     private SplineAnimate _splineAnimate;
@@ -16,23 +15,6 @@ public class PedestrianBehaviour : MonoBehaviour
 
     void Awake()
     {
-        int randomNumber = Random.Range(0, 3);
-        if (randomNumber == 0)
-        {
-            _splineToFollow = GameObject.Find("Spline 1").GetComponent<SplineContainer>();
-        }
-        else if (randomNumber == 1)
-        {
-            _splineToFollow = GameObject.Find("Spline 2").GetComponent<SplineContainer>();
-        }
-        else if (randomNumber == 2)
-        {
-            _splineToFollow = GameObject.Find("Spline 3").GetComponent<SplineContainer>();
-        }
-
-        _splineAnimate = GetComponent<SplineAnimate>();
-        _splineAnimate.Container = _splineToFollow;
-        _splineAnimate.Play();
         _walkAnimator = GetComponent<Animator>();
     }
 
@@ -43,6 +25,8 @@ public class PedestrianBehaviour : MonoBehaviour
 
     private void Update()
     {
+        // TODO: Scale pedestrians in dependance to y position to simulate depth
+
         // rotate player slightly to the left and right of the screen
         float currentX = transform.position.x;
         transform.rotation = Quaternion.Euler(0, 0, -currentX * _rotationIntensity);

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DayNightCycleController : MonoBehaviour
 {
-    [SerializeField] GameObject _streetAtNight;
-    [SerializeField] GameObject _streetLayerAtNight;
+    [SerializeReference] GameObject _skyAtNight;
+    [SerializeReference] GameObject _streetAtNight;
+    [SerializeReference] GameObject _housesAtNight;
+    [SerializeReference] GameObject _houseAtNight;
+    
     [SerializeField] Color _nightColor;
 
     bool _gettingDark;
@@ -24,12 +27,12 @@ public class DayNightCycleController : MonoBehaviour
     {
         if (_gettingDark)
         {
-            _nightColor.a += 0.0001f;
+            _nightColor.a += 0.01f;
             if (_nightColor.a >= 1) _gettingDark = false;
         }
         else
         {
-            _nightColor.a -= 0.0001f;
+            _nightColor.a -= 0.01f;
             if (_nightColor.a <= 0) _gettingDark = true;
         }
 
@@ -38,7 +41,9 @@ public class DayNightCycleController : MonoBehaviour
 
     private void UpdateSprites()
     {
+        _skyAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
         _streetAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
-        _streetLayerAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
+        _housesAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
+        _houseAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
     } 
 }
