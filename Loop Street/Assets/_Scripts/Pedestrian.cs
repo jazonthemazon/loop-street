@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class PedestrianBehaviour : MonoBehaviour
+public class Pedestrian : Spawnable
 {
     [SerializeField] private float _rotationIntensity;
 

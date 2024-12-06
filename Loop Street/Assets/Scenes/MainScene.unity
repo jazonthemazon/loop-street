@@ -258,6 +258,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1285356406}
+  - {fileID: 249224422}
+  - {fileID: 194272383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &34998618
@@ -428,6 +430,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 834550799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &194272382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194272383}
+  - component: {fileID: 194272384}
+  m_Layer: 0
+  m_Name: Car Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &194272383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194272382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &194272384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194272382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
+  _cooldown: 200
+  _wayPoints:
+  - {x: 11, y: -5}
+  - {x: -11, y: -5}
+  - {x: -2.43, y: -2.5}
+  - {x: -0.58, y: -5.89}
 --- !u!1 &248979949
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,9 +594,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pedestrianPrefab: {fileID: 2007269710772251141, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
+  _spawnablePrefab: {fileID: -243189725366628119, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
   _cooldown: 200
-  _positionOne: {x: -1.1, y: -2.99}
+  _wayPoints:
+  - {x: 11, y: -3}
+  - {x: -11, y: -3}
 --- !u!4 &249224422
 Transform:
   m_ObjectHideFlags: 0
@@ -553,11 +608,11 @@ Transform:
   m_GameObject: {fileID: 249224420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 32148271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298673402
 GameObject:
@@ -679,7 +734,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &661338851
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +1022,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &940021545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,5 +1817,4 @@ SceneRoots:
   - {fileID: 1600152910}
   - {fileID: 32148271}
   - {fileID: 298673403}
-  - {fileID: 249224422}
   - {fileID: 1884179271}

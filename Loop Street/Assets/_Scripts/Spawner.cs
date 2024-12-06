@@ -7,11 +7,11 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using DG.Tweening;
 
-public class PedestrianSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject _pedestrianPrefab;
+    [SerializeField] Spawnable _spawnablePrefab;
     [SerializeField] int _cooldown;
-    [SerializeField] Vector2 _positionOne;
+    [SerializeField] Vector2[] _wayPoints;
 
     private int currentCooldown = 0;
 
@@ -22,10 +22,10 @@ public class PedestrianSpawner : MonoBehaviour
             int randomNumber = Random.Range(1, 101);
             if (randomNumber <= 1)
             {
-                GameObject pedestrian = Instantiate(_pedestrianPrefab, transform.position, Quaternion.identity);
-                pedestrian.GetComponent<PedestrianBehaviour>().SetSize(Random.Range(1.5f, 2.2f));
+                Spawnable spawnable = Instantiate(_spawnablePrefab, _wayPoints[0], Quaternion.identity);
+                spawnable._wayPoints = _wayPoints;
+
                 currentCooldown = _cooldown;
-                pedestrian.transform.DOMove(_positionOne, 2f).SetEase(Ease.Linear);
             }
         }
         currentCooldown = Mathf.Max(currentCooldown - 1, 0);
@@ -33,9 +33,13 @@ public class PedestrianSpawner : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawSphere(transform.position, 0.3f);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(_positionOne, 0.3f);
+        Vector2 lastPosition = _wayPoints[0];
+        foreach (Vector2 position in _wayPoints)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(position, 0.1f);
+            Gizmos.DrawLine(lastPosition, position);
+            lastPosition = position;
+        }
     }
 }
