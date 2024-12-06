@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1473545971708688307}
   - component: {fileID: 1463195465673914626}
   - component: {fileID: 8020518765454976836}
-  - component: {fileID: -243189725366628119}
+  - component: {fileID: -1584230422495957920}
   m_Layer: 0
   m_Name: Pedestrian 1
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-243189725366628119
+--- !u!114 &-1584230422495957920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wayPoints: []
-  _size: 1
-  _scaleFactor: 1
-  _rotationIntensity: 3
+  _size: 0
+  _scaleFactor: 0
+  _rotationIntensity: 0
