@@ -99,7 +99,7 @@ public abstract class Spawnable : MonoBehaviour
         _previousPosition = currentPosition;
     }
 
-    public void SetWayPoints(List<Vector2> waypoints)
+    public void SetWaypoints(List<Vector2> waypoints)
     {
         _wayPoints = waypoints;
     }

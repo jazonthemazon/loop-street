@@ -9,32 +9,36 @@ using DG.Tweening;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] Spawnable _spawnablePrefab;
-    [SerializeField] int _cooldown;
-    [SerializeField] List<Vector2> _wayPoints;
+    [SerializeReference] protected Spawnable _spawnablePrefab;
+    [SerializeField] protected int _cooldown;
+    [SerializeField] protected List<Vector2> _waypoints;
 
-    private int currentCooldown = 0;
+    protected int _currentCooldown = 0;
 
     void Update()
     {
-        if (currentCooldown == 0)
+        if (_currentCooldown == 0)
         {
             int randomNumber = Random.Range(1, 101);
             if (randomNumber <= 1)
             {
-                Spawnable spawnable = Instantiate(_spawnablePrefab, _wayPoints[0], Quaternion.identity);
-                spawnable.SetWayPoints(_wayPoints);
-
-                currentCooldown = _cooldown;
+                Spawn();
+                _currentCooldown = _cooldown;
             }
         }
-        currentCooldown = Mathf.Max(currentCooldown - 1, 0);
+        _currentCooldown = Mathf.Max(_currentCooldown - 1, 0);
+    }
+
+    protected virtual void Spawn()
+    {
+        Spawnable spawnable = Instantiate(_spawnablePrefab, _waypoints[0], Quaternion.identity);
+        spawnable.SetWaypoints(_waypoints);
     }
 
     private void OnDrawGizmos()
     {
-        Vector2 lastPosition = _wayPoints[0];
-        foreach (Vector2 position in _wayPoints)
+        Vector2 lastPosition = _waypoints[0];
+        foreach (Vector2 position in _waypoints)
         {
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(position, 0.1f);
