@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Trigger Back Walk
+    m_ConditionEvent: Trigger Back
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6562640374374500981}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Trigger Front Walk
+    m_ConditionEvent: Trigger Front
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1365473505557416529}
@@ -59,19 +59,19 @@ AnimatorController:
   m_Name: Pedestrian 1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Trigger Back Walk
+  - m_Name: Trigger Back
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Trigger Front Walk
+  - m_Name: Trigger Front
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Trigger Side Walk
+  - m_Name: Trigger Side
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -208,7 +208,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Trigger Side Walk
+    m_ConditionEvent: Trigger Side
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3505442152930471406}

@@ -543,7 +543,8 @@ MonoBehaviour:
   - {x: 11, y: -4}
   - {x: -11, y: -4}
   - {x: -11, y: -5}
-  - {x: 11, y: -5}
+  - {x: -4, y: -5}
+  - {x: 1.7, y: 3}
 --- !u!1 &198518413
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +788,7 @@ MonoBehaviour:
   _wayPoints:
   - {x: 11, y: -3}
   - {x: -11, y: -3}
+  - {x: 11, y: -3}
 --- !u!4 &249224422
 Transform:
   m_ObjectHideFlags: 0

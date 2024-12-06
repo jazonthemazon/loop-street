@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Bird : Spawnable
 {
+    protected override void ScaleForDistanceIllusion()
+    {
 
+    }
 }

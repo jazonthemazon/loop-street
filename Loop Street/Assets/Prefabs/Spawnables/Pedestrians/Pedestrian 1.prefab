@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wayPoints: []
-  _size: 0
-  _scaleFactor: 0
-  _rotationIntensity: 0
+  _size: 1
+  _scaleOffset: 1
+  _rotationIntensity: 3

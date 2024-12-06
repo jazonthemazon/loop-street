@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &6875080830649756078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wayPoints: []
   _size: 1
-  _scaleFactor: 1
+  _scaleOffset: 1
   _rotationIntensity: 0
 --- !u!95 &-7496056516940268987
 Animator:
@@ -112,7 +112,7 @@ Animator:
   m_GameObject: {fileID: 8366986450621846404}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f830c7b183d9a8b47b61edafc87eb8ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

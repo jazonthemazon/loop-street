@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] Spawnable _spawnablePrefab;
     [SerializeField] int _cooldown;
-    [SerializeField] Vector2[] _wayPoints;
+    [SerializeField] List<Vector2> _wayPoints;
 
     private int currentCooldown = 0;
 
@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         Vector2 lastPosition = _wayPoints[0];
         foreach (Vector2 position in _wayPoints)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.green;
             Gizmos.DrawSphere(position, 0.1f);
             Gizmos.DrawLine(lastPosition, position);
             lastPosition = position;
