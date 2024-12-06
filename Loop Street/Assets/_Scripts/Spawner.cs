@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
             if (randomNumber <= 1)
             {
                 Spawnable spawnable = Instantiate(_spawnablePrefab, _wayPoints[0], Quaternion.identity);
-                spawnable._wayPoints = _wayPoints;
+                spawnable.SetWayPoints(_wayPoints);
 
                 currentCooldown = _cooldown;
             }

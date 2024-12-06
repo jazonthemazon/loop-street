@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 160732149667858579}
   - component: {fileID: 4934609922422371564}
   - component: {fileID: 6875080830649756078}
+  - component: {fileID: -7496056516940268987}
   m_Layer: 0
   m_Name: Car 1
   m_TagString: Untagged
@@ -97,3 +98,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc30e5aa1718ed541b5a7d2f19ae8104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wayPoints: []
+  _size: 1
+  _scaleFactor: 1
+  _rotationIntensity: 0
+--- !u!95 &-7496056516940268987
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366986450621846404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
