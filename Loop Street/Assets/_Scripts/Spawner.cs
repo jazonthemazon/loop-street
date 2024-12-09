@@ -10,23 +10,18 @@ using DG.Tweening;
 public class Spawner : MonoBehaviour
 {
     [SerializeReference] protected Spawnable _spawnablePrefab;
-    [SerializeField] protected int _cooldown;
     [SerializeField] protected List<Vector2> _waypoints;
 
     protected int _currentCooldown = 0;
 
-    void Update()
+    private void OnEnable()
     {
-        if (_currentCooldown == 0)
-        {
-            int randomNumber = Random.Range(1, 101);
-            if (randomNumber <= 1)
-            {
-                Spawn();
-                _currentCooldown = _cooldown;
-            }
-        }
-        _currentCooldown = Mathf.Max(_currentCooldown - 1, 0);
+        TimeManager.OnHourChanged += Spawn;
+    }
+
+    private void OnDisable()
+    {
+        TimeManager.OnHourChanged -= Spawn;
     }
 
     protected virtual void Spawn()
