@@ -16,6 +16,7 @@ public abstract class Spawnable : MonoBehaviour
 
     protected Animator _animator;
     protected Vector2 _previousPosition;
+    protected Tween _currentTween;
 
     void Awake()
     {
@@ -43,7 +44,7 @@ public abstract class Spawnable : MonoBehaviour
             i++;
         }
 
-        transform.DOPath(path, 5, PathType.Linear, PathMode.Sidescroller2D, 10, Color.green).SetEase(Ease.Linear);
+        _currentTween = transform.DOPath(path, 5, PathType.Linear, PathMode.Sidescroller2D, 10, Color.green).SetEase(Ease.Linear);
     }
 
     private void Update()
@@ -60,7 +61,6 @@ public abstract class Spawnable : MonoBehaviour
         float currentScale = (_scaleOffset - transform.position.y) * _size * 0.1f;
         currentScale = Mathf.Max(0, currentScale);
         transform.localScale = new Vector2(currentScale, currentScale);
-
     }
 
     protected virtual void UpdateAnimation()

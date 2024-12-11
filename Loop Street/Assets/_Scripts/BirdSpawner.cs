@@ -9,7 +9,7 @@ public class BirdSpawner : Spawner
         List<Vector2> waypoints = new List<Vector2>();
 
         float screenHeight = Camera.main.orthographicSize * 2;
-        float screenWidth = screenHeight * (16f / 9f);
+        float screenWidth = screenHeight * (16f / 9f) + 1f;
 
         waypoints.Add(new Vector2(Random.Range(-screenWidth, -screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f)));
         waypoints.Add(new Vector2(Random.Range(screenWidth, screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f)));

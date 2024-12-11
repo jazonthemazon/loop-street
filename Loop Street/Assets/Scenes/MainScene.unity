@@ -153,7 +153,9 @@ Transform:
   m_Children:
   - {fileID: 108159045}
   - {fileID: 249224422}
+  - {fileID: 1020095465}
   - {fileID: 194272383}
+  - {fileID: 68980459}
   - {fileID: 910243046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -325,6 +327,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &68980458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 68980459}
+  - component: {fileID: 68980460}
+  m_Layer: 0
+  m_Name: Car Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &68980459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68980458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68980460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68980458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
+  _waypoints:
+  - {x: 12, y: -4.3}
+  - {x: -12, y: -4.3}
 --- !u!1 &108159044
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cff51b4a555cf2498b864b11e9e64b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minutesPerSecond: 60
+  _minutesPerSecond: 30
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.554717, g: 0.554717, b: 0.554717, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -697,8 +747,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
   _waypoints:
-  - {x: -11, y: -5}
-  - {x: 11, y: -5}
+  - {x: -12, y: -5.3}
+  - {x: 12, y: -5.3}
 --- !u!1 &198518413
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,8 +989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
   _waypoints:
-  - {x: 11, y: -3}
-  - {x: -11, y: -3}
+  - {x: -12, y: -3.2}
+  - {x: 12, y: -3.2}
 --- !u!4 &249224422
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,8 +2513,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278226184
+  m_fontColor: {r: 0.03233796, g: 0.554717, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2481,14 +2531,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 140.75
+  m_fontSize: 169.55
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 300
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3225,7 +3275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
   _waypoints:
-  - {x: -11, y: 0}
+  - {x: -12, y: 0}
 --- !u!1 &940021545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3565,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1452086055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1020095464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020095465}
+  - component: {fileID: 1020095466}
+  m_Layer: 0
+  m_Name: Pedestrian Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1020095465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020095464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1020095466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020095464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
+  _waypoints:
+  - {x: 12, y: -2.8}
+  - {x: -12, y: -2.8}
 --- !u!1 &1025187790
 GameObject:
   m_ObjectHideFlags: 0
@@ -6339,8 +6437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -398.63257, y: -95.03052}
-  m_SizeDelta: {x: 797.265, y: 190.0611}
+  m_AnchoredPosition: {x: -480.18555, y: -102.5061}
+  m_SizeDelta: {x: 960.371, y: 205.0124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2076669669
 GameObject:
