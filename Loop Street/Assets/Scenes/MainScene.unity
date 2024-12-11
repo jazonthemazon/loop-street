@@ -152,7 +152,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 108159045}
-  - {fileID: 1285356406}
   - {fileID: 249224422}
   - {fileID: 194272383}
   - {fileID: 910243046}
@@ -272,7 +271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 298673403}
+  m_Father: {fileID: 1614063235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &36637678
 SpriteRenderer:
@@ -337,6 +336,7 @@ GameObject:
   - component: {fileID: 108159045}
   - component: {fileID: 108159046}
   - component: {fileID: 108159047}
+  - component: {fileID: 108159048}
   m_Layer: 0
   m_Name: TimeManager
   m_TagString: Untagged
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cff51b4a555cf2498b864b11e9e64b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minutesPerSecond: 20
+  _minutesPerSecond: 60
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +385,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeText: {fileID: 679239782}
+--- !u!114 &108159048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108159044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132f0a839817eda49a061b918460a6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skyAtNight: {fileID: 110299318}
+  _streetAtNight: {fileID: 1326053087}
+  _housesAtNight: {fileID: 1978749205}
+  _houseAtNight: {fileID: 1466703572}
+  _sunriseBeginning: 6
+  _sunriseEnd: 8
+  _sunsetBeginning: 17
+  _sunsetEnd: 19
+  _nightColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &110299318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,11 +1108,8 @@ Transform:
   - {fileID: 1312340694}
   - {fileID: 834550799}
   - {fileID: 211798379}
-  - {fileID: 1452086055}
-  - {fileID: 1324254560}
-  - {fileID: 36637677}
-  - {fileID: 1846486065}
   - {fileID: 1241984315}
+  - {fileID: 1614063235}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &299664450
@@ -2435,7 +2453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00
+  m_text: Day 1  00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -2462,7 +2480,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 214.8
+  m_fontSize: 140.75
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2967,7 +2985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 834550799}
   m_Layer: 0
-  m_Name: Night
+  m_Name: Street Night
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3842,7 +3860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1241984315}
   m_Layer: 0
-  m_Name: straigth thins on street
+  m_Name: Street Signs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3865,55 +3883,6 @@ Transform:
   - {fileID: 299664451}
   m_Father: {fileID: 298673403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1285356404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1285356406}
-  - component: {fileID: 1285356405}
-  m_Layer: 0
-  m_Name: DayNightCycleController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1285356405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285356404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132f0a839817eda49a061b918460a6c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skyAtNight: {fileID: 110299318}
-  _streetAtNight: {fileID: 1326053087}
-  _housesAtNight: {fileID: 1978749205}
-  _houseAtNight: {fileID: 1466703572}
-  _nightColor: {r: 1, g: 1, b: 1, a: 0}
---- !u!4 &1285356406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285356404}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312340693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,7 +3893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312340694}
   m_Layer: 0
-  m_Name: Day
+  m_Name: Street Day
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4110,7 +4079,7 @@ Transform:
   - {fileID: 1386932299}
   - {fileID: 332696427}
   - {fileID: 1437943598}
-  m_Father: {fileID: 298673403}
+  m_Father: {fileID: 1614063235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1326053087
 GameObject:
@@ -4656,7 +4625,7 @@ Transform:
   - {fileID: 1062017568}
   - {fileID: 769216244}
   - {fileID: 639201891}
-  m_Father: {fileID: 298673403}
+  m_Father: {fileID: 1614063235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466703572
 GameObject:
@@ -4978,6 +4947,41 @@ Transform:
   m_Children:
   - {fileID: 1633454276}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1614063234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614063235}
+  m_Layer: 0
+  m_Name: Street Lamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1614063235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614063234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1452086055}
+  - {fileID: 1324254560}
+  - {fileID: 36637677}
+  - {fileID: 1846486065}
+  m_Father: {fileID: 298673403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633454274
 GameObject:
@@ -5562,7 +5566,7 @@ Transform:
   - {fileID: 1506287860}
   - {fileID: 622432612}
   - {fileID: 1971359348}
-  m_Father: {fileID: 298673403}
+  m_Father: {fileID: 1614063235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852699986
 GameObject:
@@ -6270,8 +6274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -321.60913, y: -120.01099}
-  m_SizeDelta: {x: 643.2184, y: 240.022}
+  m_AnchoredPosition: {x: -398.63257, y: -95.03052}
+  m_SizeDelta: {x: 797.265, y: 190.0611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2076669669
 GameObject:
@@ -6361,8 +6365,8 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 32148271}
   - {fileID: 661338852}
   - {fileID: 1600152910}
   - {fileID: 1643747285}
-  - {fileID: 32148271}
   - {fileID: 298673403}

@@ -7,11 +7,11 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] private float _minutesPerSecond = 1f;
 
-    public static Action OnMinuteChanged;
-    public static Action OnHourChanged;
+    
 
     public static int Minute { get; private set; }
     public static int Hour { get; private set; }
+    public static int Day { get; private set; }
 
     private float _timer;
 
@@ -19,6 +19,7 @@ public class TimeManager : MonoBehaviour
     {
         Minute = 0;
         Hour = 0;
+        Day = 1;
         _timer = 1 / _minutesPerSecond;
     }
     void Update()
@@ -28,13 +29,21 @@ public class TimeManager : MonoBehaviour
         if (_timer <= 0)
         {
             Minute++;
-            OnMinuteChanged?.Invoke();
+            Actions.OnMinuteChanged?.Invoke();
 
             if (Minute >= 60)
             {
                 Hour++;
+                Actions.OnHourChanged?.Invoke();
+
+                if (Hour >= 24)
+                {
+                    Day++;
+                    Actions.OnDayChanged?.Invoke();
+                    Hour = 0;
+                }
+
                 Minute = 0;
-                OnHourChanged?.Invoke();
             }
 
             _timer = 1 / _minutesPerSecond;

@@ -4,43 +4,75 @@ using UnityEngine;
 
 public class DayNightCycleController : MonoBehaviour
 {
-    [SerializeReference] GameObject _skyAtNight;
-    [SerializeReference] GameObject _streetAtNight;
-    [SerializeReference] GameObject _housesAtNight;
-    [SerializeReference] GameObject _houseAtNight;
-    
-    [SerializeField] Color _nightColor;
+    [Header("References")]
+    [SerializeReference] private GameObject _skyAtNight;
+    [SerializeReference] private GameObject _streetAtNight;
+    [SerializeReference] private GameObject _housesAtNight;
+    [SerializeReference] private GameObject _houseAtNight;
 
-    bool _gettingDark;
-    
+    [Header("Sunrise and Sunset")]
+    [SerializeField] private int _sunriseBeginning;
+    [SerializeField] private int _sunriseEnd;
+    [SerializeField] private int _sunsetBeginning;
+    [SerializeField] private int _sunsetEnd;
+
+    [Header("Current Alpha")]
+    [SerializeField] private Color _nightColor;
+
+    private float _alphaChangePerMinute = 0f;
+
+    private void OnEnable()
+    {
+        Actions.OnHourChanged += StartSunriseOrSunset;
+        Actions.OnMinuteChanged += UpdateAlpha;
+    }
+
+    private void OnDisable()
+    {
+        Actions.OnHourChanged -= StartSunriseOrSunset;
+        Actions.OnMinuteChanged -= UpdateAlpha;
+    }
 
     void Start()
     {
-        _gettingDark = true;
         _nightColor = _streetAtNight.GetComponent<SpriteRenderer>().color;
-        _nightColor.a = 0;
+        _nightColor.a = 1;
 
-        UpdateSprites();
+        UpdateSpritesColor();
     }
 
-    void Update()
+    private void StartSunriseOrSunset()
     {
-        if (_gettingDark)
+        if (TimeManager.Hour == _sunriseBeginning)
         {
-            _nightColor.a += 0.01f;
-            if (_nightColor.a >= 1) _gettingDark = false;
+            _alphaChangePerMinute = -1f / ((_sunriseEnd - _sunriseBeginning) * 60f);
         }
-        else
+        else if (TimeManager.Hour == _sunsetBeginning)
         {
-            _nightColor.a -= 0.01f;
-            if (_nightColor.a <= 0) _gettingDark = true;
+            _alphaChangePerMinute = 1f / ((_sunsetEnd - _sunsetBeginning) * 60f);
         }
-
-        UpdateSprites();
+        else if (TimeManager.Hour == _sunriseEnd)
+        {
+            _nightColor.a = 0f;
+            _alphaChangePerMinute = 0f;
+        }
+        else if (TimeManager.Hour == _sunsetEnd)
+        {
+            _nightColor.a = 1f;
+            _alphaChangePerMinute = 0f;
+        }
     }
 
-    private void UpdateSprites()
+    private void UpdateAlpha()
     {
+        _nightColor.a += _alphaChangePerMinute;
+        UpdateSpritesColor();
+    }
+
+    private void UpdateSpritesColor()
+    {
+
+
         _skyAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
         _streetAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
         _housesAtNight.GetComponent<SpriteRenderer>().color = _nightColor;

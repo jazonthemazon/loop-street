@@ -16,12 +16,12 @@ public class Spawner : MonoBehaviour
 
     private void OnEnable()
     {
-        TimeManager.OnHourChanged += Spawn;
+        Actions.OnHourChanged += Spawn;
     }
 
     private void OnDisable()
     {
-        TimeManager.OnHourChanged -= Spawn;
+        Actions.OnHourChanged -= Spawn;
     }
 
     protected virtual void Spawn()
