@@ -271,7 +271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1614063235}
+  m_Father: {fileID: 1323501834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &36637678
 SpriteRenderer:
@@ -401,10 +401,12 @@ MonoBehaviour:
   _streetAtNight: {fileID: 1326053087}
   _housesAtNight: {fileID: 1978749205}
   _houseAtNight: {fileID: 1466703572}
-  _sunriseBeginning: 6
+  _streetLights: {fileID: 1323501833}
+  _streetLightsSwitchDarkness: 0.8
+  _sunriseBeginning: 4
   _sunriseEnd: 8
   _sunsetBeginning: 17
-  _sunsetEnd: 19
+  _sunsetEnd: 21
   _nightColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &110299318
 GameObject:
@@ -939,7 +941,6 @@ MonoBehaviour:
   _waypoints:
   - {x: 11, y: -3}
   - {x: -11, y: -3}
-  - {x: 11, y: -3}
 --- !u!4 &249224422
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,8 +1107,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1312340694}
-  - {fileID: 834550799}
   - {fileID: 211798379}
+  - {fileID: 834550799}
   - {fileID: 1241984315}
   - {fileID: 1614063235}
   m_Father: {fileID: 0}
@@ -3598,6 +3599,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1041361301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041361302}
+  m_Layer: 0
+  m_Name: Lamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041361302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041361301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1846486065}
+  m_Father: {fileID: 1614063235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062017567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3918,6 +3951,40 @@ Transform:
   - {fileID: 248979951}
   m_Father: {fileID: 298673403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1323501833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323501834}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1323501834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323501833}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1452086055}
+  - {fileID: 1324254560}
+  - {fileID: 36637677}
+  m_Father: {fileID: 1614063235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323905657
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,7 +4146,7 @@ Transform:
   - {fileID: 1386932299}
   - {fileID: 332696427}
   - {fileID: 1437943598}
-  m_Father: {fileID: 1614063235}
+  m_Father: {fileID: 1323501834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1326053087
 GameObject:
@@ -4625,7 +4692,7 @@ Transform:
   - {fileID: 1062017568}
   - {fileID: 769216244}
   - {fileID: 639201891}
-  m_Father: {fileID: 1614063235}
+  m_Father: {fileID: 1323501834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466703572
 GameObject:
@@ -4977,10 +5044,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1452086055}
-  - {fileID: 1324254560}
-  - {fileID: 36637677}
-  - {fileID: 1846486065}
+  - {fileID: 1041361302}
+  - {fileID: 1323501834}
   m_Father: {fileID: 298673403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633454274
@@ -5566,7 +5631,7 @@ Transform:
   - {fileID: 1506287860}
   - {fileID: 622432612}
   - {fileID: 1971359348}
-  m_Father: {fileID: 1614063235}
+  m_Father: {fileID: 1041361302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852699986
 GameObject:

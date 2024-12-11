@@ -10,6 +10,10 @@ public class DayNightCycleController : MonoBehaviour
     [SerializeReference] private GameObject _housesAtNight;
     [SerializeReference] private GameObject _houseAtNight;
 
+    [Header("Street Lights")]
+    [SerializeReference] private GameObject _streetLights;
+    [SerializeField] float _streetLightsSwitchDarkness;
+
     [Header("Sunrise and Sunset")]
     [SerializeField] private int _sunriseBeginning;
     [SerializeField] private int _sunriseEnd;
@@ -23,13 +27,13 @@ public class DayNightCycleController : MonoBehaviour
 
     private void OnEnable()
     {
-        Actions.OnHourChanged += StartSunriseOrSunset;
+        Actions.OnHourChanged += HourChange;
         Actions.OnMinuteChanged += UpdateAlpha;
     }
 
     private void OnDisable()
     {
-        Actions.OnHourChanged -= StartSunriseOrSunset;
+        Actions.OnHourChanged -= HourChange;
         Actions.OnMinuteChanged -= UpdateAlpha;
     }
 
@@ -41,32 +45,68 @@ public class DayNightCycleController : MonoBehaviour
         UpdateSpritesColor();
     }
 
-    private void StartSunriseOrSunset()
+    private void HourChange()
     {
         if (TimeManager.Hour == _sunriseBeginning)
         {
-            _alphaChangePerMinute = -1f / ((_sunriseEnd - _sunriseBeginning) * 60f);
+            StartSunrise();
         }
         else if (TimeManager.Hour == _sunsetBeginning)
         {
-            _alphaChangePerMinute = 1f / ((_sunsetEnd - _sunsetBeginning) * 60f);
+            StartSunset();
         }
         else if (TimeManager.Hour == _sunriseEnd)
         {
-            _nightColor.a = 0f;
-            _alphaChangePerMinute = 0f;
+            EndSunrise();
         }
         else if (TimeManager.Hour == _sunsetEnd)
         {
-            _nightColor.a = 1f;
-            _alphaChangePerMinute = 0f;
+            EndSunset();
         }
+    }
+
+    private void SwitchStreetLights(bool state)
+    {
+        _streetLights.SetActive(state);
+    }
+
+    private void StartSunrise()
+    {
+        _alphaChangePerMinute = -1f / ((_sunriseEnd - _sunriseBeginning) * 60f);
+    }
+
+    private void EndSunrise()
+    {
+        _nightColor.a = 0f;
+        _alphaChangePerMinute = 0f;
+    }
+
+    private void StartSunset()
+    {
+        _alphaChangePerMinute = 1f / ((_sunsetEnd - _sunsetBeginning) * 60f);
+    }
+
+    private void EndSunset()
+    {
+        _nightColor.a = 1f;
+        _alphaChangePerMinute = 0f;
     }
 
     private void UpdateAlpha()
     {
+        if (_alphaChangePerMinute == 0f) return;
+
         _nightColor.a += _alphaChangePerMinute;
         UpdateSpritesColor();
+
+        if (_nightColor.a < _streetLightsSwitchDarkness)
+        {
+            SwitchStreetLights(false);
+        }
+        else
+        {
+            SwitchStreetLights(true);
+        }
     }
 
     private void UpdateSpritesColor()
