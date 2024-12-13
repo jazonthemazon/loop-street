@@ -26,25 +26,7 @@ public abstract class Spawnable : MonoBehaviour
     private void Start()
     {
         _previousPosition = transform.position;
-
-        //Sequence sequence = DOTween.Sequence();
-        //
-        //foreach (var wayPoint in _wayPoints)
-        //{
-        //    Tween tween = transform.DOMove(wayPoint, 2f).SetEase(Ease.Linear).SetSpeedBased(true);
-        //    sequence.Append(tween);
-        //}
-
-        Vector3[] path = new Vector3[_wayPoints.Count];
-
-        int i = 0;
-        foreach (var point in _wayPoints)
-        {
-            path[i] = point;
-            i++;
-        }
-
-        _currentTween = transform.DOPath(path, 5, PathType.Linear, PathMode.Sidescroller2D, 10, Color.green).SetEase(Ease.Linear);
+        StartMoving();
     }
 
     private void Update()
@@ -56,6 +38,18 @@ public abstract class Spawnable : MonoBehaviour
 
         UpdateAnimation();
     }
+
+    protected virtual void StartMoving()
+    {
+        Sequence sequence = DOTween.Sequence();
+
+        foreach (var wayPoint in _wayPoints)
+        {
+            Tween tween = transform.DOMove(wayPoint, 2f).SetEase(Ease.Linear).SetSpeedBased(true);
+            sequence.Append(tween);
+        }
+    }
+
     protected virtual void ScaleForDistanceIllusion()
     {
         float currentScale = (_scaleOffset - transform.position.y) * _size * 0.1f;

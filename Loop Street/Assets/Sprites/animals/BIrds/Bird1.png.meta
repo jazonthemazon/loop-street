@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bird7_0
+      name: Bird1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 467
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 118523d6b3375a64397e236208a33641
-      internalID: -1063674983
+      spriteID: 9a062554a373a8e48adf77f8788a9df6
+      internalID: -35683128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_1
+      name: Bird1_1
       rect:
         serializedVersion: 2
         x: 233
         y: 467
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b466437bf2020ee4aa5efcf8e515f233
-      internalID: 1646596252
+      spriteID: 2a2dec5dcf9989d4c93e444c2f4d704e
+      internalID: 1012128408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_2
+      name: Bird1_2
       rect:
         serializedVersion: 2
         x: 466
         y: 467
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6eddb14260a3674bb77a0e867aec11e
-      internalID: 461245340
+      spriteID: de8cb5daf25364c4ea17ab593e9e4268
+      internalID: -967507421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_3
+      name: Bird1_3
       rect:
         serializedVersion: 2
         x: 0
         y: 234
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ee2ed3830f99b4c84bbbc5650eca2e
-      internalID: 1339794180
+      spriteID: fce252cccaba7ba40a8cf69ad5a3ce18
+      internalID: -516202694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_4
+      name: Bird1_4
       rect:
         serializedVersion: 2
         x: 233
         y: 234
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31dbeb7bc4688ed4e81042e42f440955
-      internalID: -1051692209
+      spriteID: 292f5428e43d52243a0e503101228c25
+      internalID: -1439344485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_5
+      name: Bird1_5
       rect:
         serializedVersion: 2
         x: 466
         y: 234
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfd2a91436c411145b4e1fd4a7b306bd
-      internalID: 554454692
+      spriteID: f15dbe0a2db70664095b2b9ead705e82
+      internalID: 1648662883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_6
+      name: Bird1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 1
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14abb7a44ff89d94392ec43bae7f6e2d
-      internalID: 1380665236
+      spriteID: 0ae737221bfe1a341b3930ef7360c0a1
+      internalID: 1543641931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird7_7
+      name: Bird1_7
       rect:
         serializedVersion: 2
         x: 233
         y: 1
         width: 233
         height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45278, y: 0.2639247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e623b210bfc102441893ea275aee73e6
-      internalID: -605072307
+      spriteID: d196648e306f4ce48bb9abe27ebd693b
+      internalID: -1753646235
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bird7_0: -1063674983
-      bird7_1: 1646596252
-      bird7_2: 461245340
-      bird7_3: 1339794180
-      bird7_4: -1051692209
-      bird7_5: 554454692
-      bird7_6: 1380665236
-      bird7_7: -605072307
+      Bird1_0: -35683128
+      Bird1_1: 1012128408
+      Bird1_2: -967507421
+      Bird1_3: -516202694
+      Bird1_4: -1439344485
+      Bird1_5: 1648662883
+      Bird1_6: 1543641931
+      Bird1_7: -1753646235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

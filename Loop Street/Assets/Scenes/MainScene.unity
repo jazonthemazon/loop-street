@@ -3274,8 +3274,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
-  _waypoints:
-  - {x: -12, y: 0}
+  _waypoints: []
+  _possibleRestSpots:
+  - {x: -4.33, y: 0.36}
+  - {x: 1.02, y: 0.12}
+  - {x: -8.7, y: 0.24}
+  - {x: 9.21, y: -0.07}
+  - {x: -1.93, y: 0.38}
+  - {x: -7.5, y: -1.38}
 --- !u!1 &940021545
 GameObject:
   m_ObjectHideFlags: 0
