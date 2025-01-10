@@ -3275,6 +3275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
   _waypoints: []
+  _spawnProbability: 0.25
   _possibleRestSpots:
   - {x: -4.33, y: 0.36}
   - {x: 1.02, y: 0.12}

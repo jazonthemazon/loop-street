@@ -19,7 +19,7 @@ public class Bird : Spawnable
 
     protected override void StartMoving()
     {
-        transform.DOMove(_wayPoints[1], 2f).SetEase(Ease.OutSine).onComplete = (() =>
+        transform.DOMove(_wayPoints[1], 50f / _speed).SetEase(Ease.OutSine).onComplete = (() =>
         {
             _isSitting = true;
             _animator.SetTrigger("Sitting");
@@ -39,7 +39,7 @@ public class Bird : Spawnable
         {
             _isSitting = false;
             _animator.SetTrigger("Flying");
-            transform.DOMove(_wayPoints[_wayPoints.Count - 1], 2f).SetEase(Ease.InSine).onComplete = (() =>
+            transform.DOMove(_wayPoints[_wayPoints.Count - 1], 50f / _speed).SetEase(Ease.InSine).onComplete = (() =>
             {
                 Destroy(gameObject);
             });

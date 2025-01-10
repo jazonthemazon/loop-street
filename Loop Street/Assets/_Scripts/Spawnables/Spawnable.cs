@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
 public abstract class Spawnable : MonoBehaviour
 {
+    [Header("Speed")]
+    [SerializeField] protected float _speed;
+
     [Header("Path")]
     [SerializeField] protected List<Vector2> _wayPoints;
 
@@ -45,7 +48,7 @@ public abstract class Spawnable : MonoBehaviour
 
         foreach (var wayPoint in _wayPoints)
         {
-            Tween tween = transform.DOMove(wayPoint, 2f).SetEase(Ease.Linear).SetSpeedBased(true);
+            Tween tween = transform.DOMove(wayPoint, 50f / _speed).SetEase(Ease.Linear).SetSpeedBased(true);
             sequence.Append(tween);
         }
     }

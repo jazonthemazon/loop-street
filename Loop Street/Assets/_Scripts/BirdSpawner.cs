@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BirdSpawner : Spawner
 {
+    [SerializeField][Range(0, 1)] float _spawnProbability;
     [SerializeField] private List<Vector2> _possibleRestSpots = new();
 
     protected override void Spawn()
     {
+        if (Random.value > _spawnProbability) return;
+
         _waypoints = new();
 
         _waypoints.Add(PointOnLeftOrRightOfScreen());
@@ -29,11 +32,11 @@ public class BirdSpawner : Spawner
         
         if (!onTheRight)
         {
-            return new Vector2(Random.Range(-screenWidth, -screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f));
+            return new(Random.Range(-screenWidth, -screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f));
         }
         else
         {
-            return new Vector2(Random.Range(screenWidth, screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f));
+            return new(Random.Range(screenWidth, screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f));
         }
     }
 
