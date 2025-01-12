@@ -17,7 +17,7 @@ public class Bird : Spawnable
         Actions.OnHourChanged -= FlyAway;
     }
 
-    protected override void StartMoving()
+    protected override void Move()
     {
         transform.DOMove(_wayPoints[1], 50f / _speed).SetEase(Ease.OutSine).onComplete = (() =>
         {
