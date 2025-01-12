@@ -156,6 +156,7 @@ Transform:
   - {fileID: 1020095465}
   - {fileID: 194272383}
   - {fileID: 68980459}
+  - {fileID: 1192292113}
   - {fileID: 910243046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,7 +375,9 @@ MonoBehaviour:
   _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
   _waypoints:
   - {x: 12, y: -4.3}
-  - {x: -12, y: -4.3}
+  - {x: -3, y: -4.3}
+  - {x: -0.4, y: 0}
+  _showGizmos: 0
 --- !u!1 &108159044
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +752,7 @@ MonoBehaviour:
   _waypoints:
   - {x: -12, y: -5.3}
   - {x: 12, y: -5.3}
+  _showGizmos: 0
 --- !u!1 &198518413
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +995,7 @@ MonoBehaviour:
   _waypoints:
   - {x: -12, y: -3.2}
   - {x: 12, y: -3.2}
+  _showGizmos: 0
 --- !u!4 &249224422
 Transform:
   m_ObjectHideFlags: 0
@@ -3275,6 +3280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
   _waypoints: []
+  _showGizmos: 0
   _spawnProbability: 0.25
   _possibleRestSpots:
   - {x: -4.33, y: 0.36}
@@ -3619,7 +3625,9 @@ MonoBehaviour:
   _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
   _waypoints:
   - {x: 12, y: -2.8}
-  - {x: -12, y: -2.8}
+  - {x: -1, y: -2.8}
+  - {x: 0, y: 0}
+  _showGizmos: 0
 --- !u!1 &1025187790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,6 +3912,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1192292112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192292113}
+  - component: {fileID: 1192292114}
+  m_Layer: 0
+  m_Name: Car Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1192292113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192292112}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1192292114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192292112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
+  _waypoints:
+  - {x: 0, y: 0.6}
+  - {x: -4.5, y: -4}
+  - {x: -12, y: -4}
+  _showGizmos: 1
 --- !u!1 &1223733256
 GameObject:
   m_ObjectHideFlags: 0

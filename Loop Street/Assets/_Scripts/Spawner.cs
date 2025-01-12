@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeReference] protected Spawnable _spawnablePrefab;
     [SerializeField] protected List<Vector2> _waypoints;
+    [SerializeField] protected bool _showGizmos;
 
     protected int _currentCooldown = 0;
 
@@ -32,6 +33,8 @@ public class Spawner : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!_showGizmos) return;
+
         Vector2 lastPosition = _waypoints[0];
         foreach (Vector2 position in _waypoints)
         {

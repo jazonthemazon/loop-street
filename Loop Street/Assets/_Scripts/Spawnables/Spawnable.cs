@@ -1,5 +1,3 @@
-using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,9 +15,15 @@ public abstract class Spawnable : MonoBehaviour
     [SerializeField] protected float _scaleOffset;
     [SerializeField] protected float _rotationIntensity;
 
+    [Header("Raycast Variables")]
+    [SerializeField] private float _rayLength;
+    [SerializeField] private Color _rayColor;
+
     protected Animator _animator;
     protected Vector2 _previousPosition;
-    protected Tween _currentTween;
+    protected Vector2 _movementDirection;
+    protected Vector2 _nextWayPoint;
+    protected int _nextWayPointIndex;
 
     void Awake()
     {
@@ -29,51 +33,65 @@ public abstract class Spawnable : MonoBehaviour
     private void Start()
     {
         _previousPosition = transform.position;
-        StartMoving();
+        _nextWayPointIndex = 1;
+        _nextWayPoint = _wayPoints[_nextWayPointIndex];
     }
 
     private void Update()
     {
-        ScaleForDistanceIllusion();
+        RaycastHit2D hit = (Physics2D.Raycast(transform.position, _movementDirection, _rayLength * transform.localScale.x));
 
-        // rotate spawnable slightly to the left and right of the screen
-        transform.rotation = Quaternion.Euler(0, 0, -transform.position.x * _rotationIntensity);
-
-        UpdateAnimation();
+        if (!hit)
+        {
+            Move();
+            ScaleForDistanceIllusion();
+            RotateSpawnable();
+            UpdateAnimation();
+        }
     }
 
-    protected virtual void StartMoving()
+    protected virtual void Move()
     {
-        Sequence sequence = DOTween.Sequence();
-
-        foreach (var wayPoint in _wayPoints)
+        if (Vector2.Distance(transform.position, _nextWayPoint) < 0.2f)
         {
-            Tween tween = transform.DOMove(wayPoint, 50f / _speed).SetEase(Ease.Linear).SetSpeedBased(true);
-            sequence.Append(tween);
+            if (_nextWayPointIndex == _wayPoints.Count - 1)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            _nextWayPointIndex++;
+            _nextWayPoint = _wayPoints[_nextWayPointIndex];
         }
+        transform.position += ((Vector3)_nextWayPoint - transform.position).normalized * (_scaleOffset - transform.position.y) * 0.2f * _speed * Time.deltaTime;
     }
 
     protected virtual void ScaleForDistanceIllusion()
     {
         float currentScale = (_scaleOffset - transform.position.y) * _size * 0.1f;
         currentScale = Mathf.Max(0, currentScale);
-        transform.localScale = new Vector2(currentScale, currentScale);
+        transform.localScale = new(currentScale, currentScale);
+    }
+
+    private void RotateSpawnable()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, -transform.position.x * _rotationIntensity);
     }
 
     protected virtual void UpdateAnimation()
     {
         Vector2 currentPosition = transform.position;
-        Vector2 deltaPosition = currentPosition - _previousPosition;
-        deltaPosition.Normalize();
+        _movementDirection = currentPosition - _previousPosition;
+        _movementDirection.Normalize();
 
-        if (Mathf.Abs(deltaPosition.x) > Mathf.Abs(deltaPosition.y))
+        if (Mathf.Abs(_movementDirection.x) > Mathf.Abs(_movementDirection.y))
         {
-            if (deltaPosition.x < 0)
+            if (_movementDirection.x < 0)
             {
                 _animator.SetTrigger("Trigger Side");
                 GetComponent<SpriteRenderer>().flipX = false;
             }
-            else if (deltaPosition.x > 0)
+            else if (_movementDirection.x > 0)
             {
                 _animator.SetTrigger("Trigger Side");
                 GetComponent<SpriteRenderer>().flipX = true;
@@ -81,12 +99,12 @@ public abstract class Spawnable : MonoBehaviour
         }
         else
         {
-            if (deltaPosition.y < 0)
+            if (_movementDirection.y < 0)
             {
                 _animator.SetTrigger("Trigger Front");
                 GetComponent<SpriteRenderer>().flipX = false;
             }
-            else if (deltaPosition.y > 0)
+            else if (_movementDirection.y > 0)
             {
                 _animator.SetTrigger("Trigger Back");
                 GetComponent<SpriteRenderer>().flipX = false;
@@ -99,5 +117,11 @@ public abstract class Spawnable : MonoBehaviour
     public void SetWaypoints(List<Vector2> waypoints)
     {
         _wayPoints = waypoints;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = _rayColor;
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)_movementDirection * _rayLength * transform.localScale.x);
     }
 }
