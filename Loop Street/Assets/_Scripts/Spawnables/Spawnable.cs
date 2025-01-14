@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
 public abstract class Spawnable : MonoBehaviour
 {
     [Header("Speed")]
@@ -18,35 +17,54 @@ public abstract class Spawnable : MonoBehaviour
     [Header("Raycast Variables")]
     [SerializeField] private float _rayLength;
     [SerializeField] private Color _rayColor;
+    [SerializeField] private float _waitDuration;
 
+    protected GameObject _spriteGameObject;
+    protected SpriteRenderer _spriteRenderer;
     protected Animator _animator;
     protected Vector2 _previousPosition;
     protected Vector2 _movementDirection;
     protected Vector2 _nextWayPoint;
     protected int _nextWayPointIndex;
+    protected float _cooldownCounter;
 
     void Awake()
     {
-        _animator = GetComponent<Animator>();
+        _spriteGameObject = transform.GetChild(0).gameObject;
+        _spriteRenderer = _spriteGameObject.GetComponent<SpriteRenderer>();
+        _animator = _spriteGameObject.GetComponent<Animator>();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
+        ScaleForDistanceIllusion();
+        RotateSpawnable();
+
         _previousPosition = transform.position;
         _nextWayPointIndex = 1;
         _nextWayPoint = _wayPoints[_nextWayPointIndex];
+        _cooldownCounter = 0f;
     }
 
     private void Update()
     {
         RaycastHit2D hit = (Physics2D.Raycast(transform.position, _movementDirection, _rayLength * transform.localScale.x));
 
-        if (!hit)
+        if (hit)
+        {
+            _cooldownCounter = _waitDuration;
+            return;
+        }
+        else if (_cooldownCounter == 0f)
         {
             Move();
             ScaleForDistanceIllusion();
             RotateSpawnable();
             UpdateAnimation();
+        }
+        else
+        {
+            _cooldownCounter = Mathf.Max(_cooldownCounter - Time.deltaTime, 0);
         }
     }
 
@@ -75,7 +93,7 @@ public abstract class Spawnable : MonoBehaviour
 
     private void RotateSpawnable()
     {
-        transform.rotation = Quaternion.Euler(0, 0, -transform.position.x * _rotationIntensity);
+        _spriteGameObject.transform.rotation = Quaternion.Euler(0, 0, -transform.position.x * _rotationIntensity);
     }
 
     protected virtual void UpdateAnimation()
@@ -89,12 +107,12 @@ public abstract class Spawnable : MonoBehaviour
             if (_movementDirection.x < 0)
             {
                 _animator.SetTrigger("Trigger Side");
-                GetComponent<SpriteRenderer>().flipX = false;
+                _spriteRenderer.flipX = false;
             }
             else if (_movementDirection.x > 0)
             {
                 _animator.SetTrigger("Trigger Side");
-                GetComponent<SpriteRenderer>().flipX = true;
+                _spriteRenderer.flipX = true;
             }
         }
         else
@@ -102,12 +120,12 @@ public abstract class Spawnable : MonoBehaviour
             if (_movementDirection.y < 0)
             {
                 _animator.SetTrigger("Trigger Front");
-                GetComponent<SpriteRenderer>().flipX = false;
+                _spriteRenderer.flipX = false;
             }
             else if (_movementDirection.y > 0)
             {
                 _animator.SetTrigger("Trigger Back");
-                GetComponent<SpriteRenderer>().flipX = false;
+                _spriteRenderer.flipX = false;
             }
         }
 

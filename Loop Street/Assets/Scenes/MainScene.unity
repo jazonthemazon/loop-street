@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cff51b4a555cf2498b864b11e9e64b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minutesPerSecond: 30
+  _minutesPerSecond: 10
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3281,7 +3281,7 @@ MonoBehaviour:
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
   _waypoints: []
   _showGizmos: 0
-  _spawnProbability: 0.25
+  _spawnProbability: 1
   _possibleRestSpots:
   - {x: -4.33, y: 0.36}
   - {x: 1.02, y: 0.12}
@@ -3961,7 +3961,7 @@ MonoBehaviour:
   - {x: 0, y: 0.6}
   - {x: -4.5, y: -4}
   - {x: -12, y: -4}
-  _showGizmos: 1
+  _showGizmos: 0
 --- !u!1 &1223733256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5394,10 +5394,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
