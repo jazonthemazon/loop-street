@@ -1,15 +1,9 @@
-using JetBrains.Annotations;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using Random = UnityEngine.Random;
-using DG.Tweening;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeReference] protected Spawnable _spawnablePrefab;
+    [SerializeField] protected Spawnable _spawnablePrefab;
     [SerializeField] protected List<Vector2> _waypoints;
     [SerializeField] protected bool _showGizmos;
 
@@ -33,7 +27,7 @@ public class Spawner : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (!_showGizmos) return;
+        if (!_showGizmos || _waypoints.Count == 0) return;
 
         Vector2 lastPosition = _waypoints[0];
         foreach (Vector2 position in _waypoints)

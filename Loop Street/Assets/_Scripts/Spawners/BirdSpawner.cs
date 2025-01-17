@@ -42,6 +42,8 @@ public class BirdSpawner : Spawner
 
     private void OnDrawGizmos()
     {
+        if (!_showGizmos) return;
+
         Gizmos.color = Color.red;
         foreach (Vector2 point in _possibleRestSpots)
         {

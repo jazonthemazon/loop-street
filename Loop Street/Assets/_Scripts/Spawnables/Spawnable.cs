@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Spawnable : MonoBehaviour
+public class Spawnable : MonoBehaviour
 {
     [Header("Speed")]
     [SerializeField] protected float _speed;

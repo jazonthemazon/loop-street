@@ -158,6 +158,11 @@ Transform:
   - {fileID: 68980459}
   - {fileID: 1192292113}
   - {fileID: 910243046}
+  - {fileID: 1608917767}
+  - {fileID: 1885143257}
+  - {fileID: 599154093}
+  - {fileID: 1958788723}
+  - {fileID: 1537517845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &34998618
@@ -376,7 +381,7 @@ MonoBehaviour:
   _waypoints:
   - {x: 12, y: -4.3}
   - {x: -3, y: -4.3}
-  - {x: -0.4, y: 0}
+  - {x: 0.2, y: 1}
   _showGizmos: 0
 --- !u!1 &108159044
 GameObject:
@@ -2271,6 +2276,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &599154092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599154093}
+  - component: {fileID: 599154094}
+  m_Layer: 0
+  m_Name: BackgroundBirdSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &599154093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599154092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599154094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599154092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
+  _waypoints:
+  - {x: 3, y: 2}
+  - {x: -11, y: 2}
+  _showGizmos: 1
 --- !u!1 &622432611
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,6 +5200,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1537517844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537517845}
+  - component: {fileID: 1537517846}
+  m_Layer: 0
+  m_Name: BackgroundBirdSpawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537517845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537517844}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537517846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537517844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
+  _waypoints:
+  - {x: 2.5, y: 3.5}
+  - {x: -11, y: 3.5}
+  _showGizmos: 1
 --- !u!1 &1600152909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5178,6 +5281,55 @@ Transform:
   - {fileID: 1633454276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608917766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608917767}
+  - component: {fileID: 1608917768}
+  m_Layer: 0
+  m_Name: BackgroundBirdSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608917767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608917766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608917768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608917766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
+  _waypoints:
+  - {x: 2, y: 3}
+  - {x: -11, y: 3}
+  _showGizmos: 1
 --- !u!1 &1614063234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,6 +6284,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1846486065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1885143256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885143257}
+  - component: {fileID: 1885143258}
+  m_Layer: 0
+  m_Name: BackgroundBirdSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885143257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885143256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885143258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885143256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
+  _waypoints:
+  - {x: 3, y: 4}
+  - {x: -11, y: 4}
+  _showGizmos: 1
 --- !u!1 &1890907464
 GameObject:
   m_ObjectHideFlags: 0
@@ -6300,6 +6501,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1324254560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1958788722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958788723}
+  - component: {fileID: 1958788724}
+  m_Layer: 0
+  m_Name: BackgroundBirdSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1958788723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958788722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958788724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958788722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
+  _waypoints:
+  - {x: 2.5, y: 2.5}
+  - {x: -11, y: 2.5}
+  _showGizmos: 1
 --- !u!1 &1971359347
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,7 +6752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -480.18555, y: -102.5061}
+  m_AnchoredPosition: {x: -480.18555, y: -102.50586}
   m_SizeDelta: {x: 960.371, y: 205.0124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2076669669
