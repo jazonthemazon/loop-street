@@ -7,8 +7,6 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] private float _minutesPerSecond = 1f;
 
-    
-
     public static int Minute { get; private set; }
     public static int Hour { get; private set; }
     public static int Day { get; private set; }

@@ -152,17 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 108159045}
-  - {fileID: 249224422}
-  - {fileID: 1020095465}
-  - {fileID: 194272383}
-  - {fileID: 68980459}
-  - {fileID: 1192292113}
-  - {fileID: 910243046}
-  - {fileID: 1608917767}
-  - {fileID: 1885143257}
-  - {fileID: 599154093}
-  - {fileID: 1958788723}
-  - {fileID: 1537517845}
+  - {fileID: 1804266684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &34998618
@@ -333,56 +323,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!1 &68980458
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 68980459}
-  - component: {fileID: 68980460}
-  m_Layer: 0
-  m_Name: Car Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &68980459
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68980458}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &68980460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68980458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
-  _waypoints:
-  - {x: 12, y: -4.3}
-  - {x: -3, y: -4.3}
-  - {x: 0.2, y: 1}
-  _showGizmos: 0
 --- !u!1 &108159044
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cff51b4a555cf2498b864b11e9e64b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minutesPerSecond: 30
+  _minutesPerSecond: 20
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,55 +649,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189177170}
   m_CullTransparentMesh: 1
---- !u!1 &194272382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 194272383}
-  - component: {fileID: 194272384}
-  m_Layer: 0
-  m_Name: Car Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &194272383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194272382}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &194272384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194272382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
-  _waypoints:
-  - {x: -12, y: -5.3}
-  - {x: 12, y: -5.3}
-  _showGizmos: 0
 --- !u!1 &198518413
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,10 +888,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
-  _waypoints:
-  - {x: -12, y: -3.2}
-  - {x: 12, y: -3.2}
-  _showGizmos: 0
+  _paths:
+  - Waypoints:
+    - {x: -12, y: -3.2}
+    - {x: 12, y: -3.2}
+  - Waypoints:
+    - {x: -12, y: -3.2}
+    - {x: -1, y: -3.2}
+    - {x: 0.2, y: 0.5}
+  - Waypoints:
+    - {x: 12, y: -2.8}
+    - {x: -12, y: -2.8}
+  - Waypoints:
+    - {x: 12, y: -2.8}
+    - {x: -0.9, y: -2.8}
+    - {x: 0.2, y: 0.5}
+  - Waypoints:
+    - {x: -0.4, y: 0.5}
+    - {x: -4.85, y: -2.8}
+    - {x: -12, y: -2.8}
+  - Waypoints:
+    - {x: -0.4, y: 0.5}
+    - {x: -5.4, y: -3.2}
+    - {x: 12, y: -3.2}
+  _showGizmos: 1
+  _gizmoColor: {r: 0, g: 1, b: 0.043177128, a: 1}
 --- !u!4 &249224422
 Transform:
   m_ObjectHideFlags: 0
@@ -1009,12 +921,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249224420}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 32148271}
+  m_Father: {fileID: 1804266684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &294692891
 GameObject:
@@ -2301,12 +2213,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599154092}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 32148271}
+  m_Father: {fileID: 1804266684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &599154094
 MonoBehaviour:
@@ -2321,10 +2233,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _waypoints:
-  - {x: 3, y: 2}
-  - {x: -11, y: 2}
+  _paths:
+  - Waypoints:
+    - {x: 2, y: 5}
+    - {x: -12, y: 5}
+  - Waypoints:
+    - {x: 2, y: 4}
+    - {x: -12, y: 4}
+  - Waypoints:
+    - {x: 2, y: 3}
+    - {x: -12, y: 3}
   _showGizmos: 1
+  _gizmoColor: {r: 1, g: 0.830045, b: 0, a: 1}
 --- !u!1 &622432611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,12 +3233,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910243045}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 32148271}
+  m_Father: {fileID: 1804266684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &910243047
 MonoBehaviour:
@@ -3333,8 +3253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
-  _waypoints: []
-  _showGizmos: 0
+  _paths: []
+  _showGizmos: 1
+  _gizmoColor: {r: 1, g: 0, b: 0, a: 1}
   _spawnProbability: 1
   _possibleRestSpots:
   - {x: -4.33, y: 0.36}
@@ -3632,56 +3553,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1452086055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1020095464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1020095465}
-  - component: {fileID: 1020095466}
-  m_Layer: 0
-  m_Name: Pedestrian Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1020095465
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020095464}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1020095466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020095464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14603f25a8c25a459136d0ce57d27e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
-  _waypoints:
-  - {x: 12, y: -2.8}
-  - {x: -1, y: -2.8}
-  - {x: 0, y: 0}
-  _showGizmos: 0
 --- !u!1 &1025187790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,12 +3862,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192292112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 32148271}
+  m_Father: {fileID: 1804266684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1192292114
 MonoBehaviour:
@@ -4011,11 +3882,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
-  _waypoints:
-  - {x: -0.2, y: 0.6}
-  - {x: -4.5, y: -4}
-  - {x: -12, y: -4}
-  _showGizmos: 0
+  _paths:
+  - Waypoints:
+    - {x: -12, y: -5.3}
+    - {x: 12, y: -5.3}
+  - Waypoints:
+    - {x: 12, y: -4.3}
+    - {x: -12, y: -4.3}
+  - Waypoints:
+    - {x: 12, y: -4.3}
+    - {x: -2.8, y: -4.3}
+    - {x: 0, y: 0.5}
+  - Waypoints:
+    - {x: -0.2, y: 0.5}
+    - {x: -4.8, y: -4.3}
+    - {x: -12, y: -4.3}
+  _showGizmos: 1
+  _gizmoColor: {r: 0, g: 1, b: 0.99766874, a: 1}
 --- !u!1 &1223733256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,55 +5083,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1537517844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1537517845}
-  - component: {fileID: 1537517846}
-  m_Layer: 0
-  m_Name: BackgroundBirdSpawner (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1537517845
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537517844}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1537517846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537517844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _waypoints:
-  - {x: 2.5, y: 3.5}
-  - {x: -11, y: 3.5}
-  _showGizmos: 1
 --- !u!1 &1600152909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5281,55 +5115,6 @@ Transform:
   - {fileID: 1633454276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1608917766
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1608917767}
-  - component: {fileID: 1608917768}
-  m_Layer: 0
-  m_Name: BackgroundBirdSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1608917767
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608917766}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608917768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608917766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _waypoints:
-  - {x: 2, y: 3}
-  - {x: -11, y: 3}
-  _showGizmos: 1
 --- !u!1 &1614063234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5664,6 +5449,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1804266683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804266684}
+  m_Layer: 0
+  m_Name: Spawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1804266684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804266683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 249224422}
+  - {fileID: 1192292113}
+  - {fileID: 910243046}
+  - {fileID: 599154093}
+  m_Father: {fileID: 32148271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810534081
 GameObject:
   m_ObjectHideFlags: 0
@@ -6284,55 +6104,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1846486065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1885143256
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885143257}
-  - component: {fileID: 1885143258}
-  m_Layer: 0
-  m_Name: BackgroundBirdSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1885143257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885143256}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1885143258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885143256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _waypoints:
-  - {x: 3, y: 4}
-  - {x: -11, y: 4}
-  _showGizmos: 1
 --- !u!1 &1890907464
 GameObject:
   m_ObjectHideFlags: 0
@@ -6501,55 +6272,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1324254560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1958788722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1958788723}
-  - component: {fileID: 1958788724}
-  m_Layer: 0
-  m_Name: BackgroundBirdSpawner (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1958788723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958788722}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 32148271}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1958788724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958788722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a29f31397695b4f95cb8e92e57cf30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnablePrefab: {fileID: 8570998875624325692, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _waypoints:
-  - {x: 2.5, y: 2.5}
-  - {x: -11, y: 2.5}
-  _showGizmos: 1
 --- !u!1 &1971359347
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,14 +1,10 @@
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Spawnable : MonoBehaviour
 {
     [Header("Speed")]
     [SerializeField] protected float _speed;
-
-    [Header("Path")]
-    [SerializeField] protected List<Vector2> _wayPoints;
 
     [Header("Size & Scaling")]
     [SerializeField] protected float _size;
@@ -26,6 +22,7 @@ public class Spawnable : MonoBehaviour
     protected Animator _animator;
     protected Vector2 _previousPosition;
     protected Vector2 _movementDirection;
+    protected List<Vector2> _wayPoints;
     protected Vector2 _nextWayPoint;
     protected int _nextWayPointIndex;
     protected float _cooldownCounter;
@@ -116,7 +113,7 @@ public class Spawnable : MonoBehaviour
         _movementDirection = currentPosition - _previousPosition;
         _movementDirection.Normalize();
 
-        if (Mathf.Abs(_movementDirection.x) > Mathf.Abs(_movementDirection.y))
+        if (Mathf.Abs(_movementDirection.x) > 0.9f)
         {
             if (_movementDirection.x < 0)
             {

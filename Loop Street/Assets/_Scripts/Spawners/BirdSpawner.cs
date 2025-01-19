@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class BirdSpawner : Spawner
 {
-    [SerializeField][Range(0, 1)] float _spawnProbability;
+    [SerializeField][Range(0, 1)] private float _spawnProbability;
     [SerializeField] private List<Vector2> _possibleRestSpots = new();
 
     protected override void Spawn()
     {
         if (Random.value > _spawnProbability) return;
 
-        _waypoints = new();
+        _currentPath = new();
 
-        _waypoints.Add(PointOnLeftOrRightOfScreen());
+        _currentPath.Add(PointOnLeftOrRightOfScreen());
 
         int randomNumber = Random.Range(0, _possibleRestSpots.Count);
-        _waypoints.Add(_possibleRestSpots[randomNumber]);
+        _currentPath.Add(_possibleRestSpots[randomNumber]);
 
-        _waypoints.Add(PointOnLeftOrRightOfScreen());
+        _currentPath.Add(PointOnLeftOrRightOfScreen());
 
-        Spawnable spawnable = Instantiate(_spawnablePrefab, _waypoints[0], Quaternion.identity);
-        spawnable.SetWaypoints(_waypoints);
+        Spawnable spawnable = Instantiate(_spawnablePrefab, _currentPath[0], Quaternion.identity);
+        spawnable.SetWaypoints(_currentPath);
     }
 
     private Vector2 PointOnLeftOrRightOfScreen()
@@ -44,7 +44,7 @@ public class BirdSpawner : Spawner
     {
         if (!_showGizmos) return;
 
-        Gizmos.color = Color.red;
+        Gizmos.color = _gizmoColor;
         foreach (Vector2 point in _possibleRestSpots)
         {
             Gizmos.DrawSphere(point, 0.1f);
