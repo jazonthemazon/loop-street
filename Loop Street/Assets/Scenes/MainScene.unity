@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cff51b4a555cf2498b864b11e9e64b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minutesPerSecond: 10
+  _minutesPerSecond: 30
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4012,7 +4012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
   _waypoints:
-  - {x: 0, y: 0.6}
+  - {x: -0.2, y: 0.6}
   - {x: -4.5, y: -4}
   - {x: -12, y: -4}
   _showGizmos: 0

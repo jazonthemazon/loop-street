@@ -37,11 +37,6 @@ public class Bird : Spawnable
         });
     }
 
-    protected override void ScaleForDistanceIllusion()
-    {
-        
-    }
-
     private void FlyAway()
     {
         if (_isSitting)

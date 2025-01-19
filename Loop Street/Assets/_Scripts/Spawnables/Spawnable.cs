@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Spawnable : MonoBehaviour
@@ -11,6 +12,7 @@ public class Spawnable : MonoBehaviour
 
     [Header("Size & Scaling")]
     [SerializeField] protected float _size;
+    [SerializeField] protected bool _scaleBasedOnYCoordinate;
     [SerializeField] protected float _scaleOffset;
     [SerializeField] protected float _rotationIntensity;
 
@@ -37,6 +39,8 @@ public class Spawnable : MonoBehaviour
 
     protected virtual void Start()
     {
+        float startingScale = transform.localScale.x * _size;
+        transform.localScale = new(startingScale, startingScale, startingScale);
         ScaleForDistanceIllusion();
         RotateSpawnable();
 
@@ -81,11 +85,21 @@ public class Spawnable : MonoBehaviour
             _nextWayPointIndex++;
             _nextWayPoint = _wayPoints[_nextWayPointIndex];
         }
-        transform.position += ((Vector3)_nextWayPoint - transform.position).normalized * (_scaleOffset - transform.position.y) * 0.2f * _speed * Time.deltaTime;
+
+        if (_scaleBasedOnYCoordinate)
+        {
+            transform.position += (_scaleOffset - transform.position.y) * _speed * 0.2f * Time.deltaTime * ((Vector3)_nextWayPoint - transform.position).normalized;
+        }
+        else
+        {
+            transform.position += _speed * 0.2f * Time.deltaTime * ((Vector3)_nextWayPoint - transform.position).normalized;
+        }
     }
 
     protected virtual void ScaleForDistanceIllusion()
     {
+        if (!_scaleBasedOnYCoordinate) return;
+
         float currentScale = (_scaleOffset - transform.position.y) * _size * 0.1f;
         currentScale = Mathf.Max(0, currentScale);
         transform.localScale = new(currentScale, currentScale);

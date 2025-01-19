@@ -49,6 +49,7 @@ MonoBehaviour:
   _speed: 6
   _wayPoints: []
   _size: 0.8
+  _scaleBasedOnYCoordinate: 1
   _scaleOffset: 1
   _rotationIntensity: 0
   _rayLength: 9
