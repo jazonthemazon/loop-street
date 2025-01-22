@@ -27,7 +27,7 @@ public class Spawnable : MonoBehaviour
     protected int _nextWayPointIndex;
     protected float _cooldownCounter;
 
-    void Awake()
+    protected virtual void Awake()
     {
         _spriteGameObject = transform.GetChild(0).gameObject;
         _spriteRenderer = _spriteGameObject.GetComponent<SpriteRenderer>();
