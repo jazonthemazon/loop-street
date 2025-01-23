@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: auto4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 1376
+        height: 808
+      alignment: 9
+      pivot: {x: 0.4906957, y: 0.2374277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a28fb0dd9e00547ab1428e24161535
+      internalID: 1897383808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: auto4_1
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 836
+        width: 1376
+        height: 808
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30bb1deb30ad7d4ebe1298e47724d1c
+      internalID: 1012811050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: auto4_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 1376
+        height: 808
+      alignment: 9
+      pivot: {x: 0.5239252, y: 0.2804352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09c9073720b9b74f96a444745138350
+      internalID: 1702766516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: auto4_3
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 28
+        width: 1376
+        height: 808
+      alignment: 9
+      pivot: {x: 0.5186085, y: 0.2781715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f683665cd8940c468c2969943074687
+      internalID: 179102529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      auto4_0: 1897383808
+      auto4_1: 1012811050
+      auto4_2: 1702766516
+      auto4_3: 179102529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
