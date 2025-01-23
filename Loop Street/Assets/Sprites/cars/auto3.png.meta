@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac05b8b597c08144c8140ba7271f69ae
+guid: fe5999a3c7c1c614bad24414dbd6089a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: auto3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 1480
+        height: 808
+      alignment: 9
+      pivot: {x: 0.5098862, y: 0.2849624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4b31d39a519d9459a9d9441dfeabe2
+      internalID: 287752610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: auto3_1
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 836
+        width: 1376
+        height: 808
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 52, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1909e315e2435f42b2020bc49e407b2
+      internalID: -1659604780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: auto3_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 1376
+        height: 808
+      alignment: 9
+      pivot: {x: 0.5305711, y: 0.21931909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1792d897026fa843923ced1897b5352
+      internalID: 889112788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: auto3_3
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 28
+        width: 1376
+        height: 808
+      alignment: 9
+      pivot: {x: 0.5013293, y: 0.2147919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050c661517ed21741b1d97b1089257e5
+      internalID: -808350804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      auto3_0: 287752610
+      auto3_1: -1659604780
+      auto3_2: 889112788
+      auto3_3: -808350804
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

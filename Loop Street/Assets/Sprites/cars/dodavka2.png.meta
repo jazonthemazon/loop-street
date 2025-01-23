@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac05b8b597c08144c8140ba7271f69ae
+guid: 7de9ee1c9da932746a879dea2e2abd22
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: dodavka2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 924
+        width: 1376
+        height: 720
+      alignment: 9
+      pivot: {x: 0.5478866, y: 0.2356698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17dc63e017c5f0743983205e7868d546
+      internalID: 845320452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dodavka2_1
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 959
+        width: 1376
+        height: 685
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fffb8235d2d7894b8bc3cdec9f425b4
+      internalID: -1265468190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dodavka2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 1376
+        height: 875
+      alignment: 9
+      pivot: {x: 0.521283, y: 0.2364329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9954821652ee1fe4cbe5b8e37985b06a
+      internalID: 2040367163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dodavka2_3
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 7
+        width: 1376
+        height: 923
+      alignment: 9
+      pivot: {x: 0.5053211, y: 0.2364333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f80f850b94d69c4982a44650eb9868f
+      internalID: -710930587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dodavka2_0: 845320452
+      dodavka2_1: -1265468190
+      dodavka2_2: 2040367163
+      dodavka2_3: -710930587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
