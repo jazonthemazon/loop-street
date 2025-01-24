@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 6
-  _size: 0.8
+  _size: 2.3
   _scaleBasedOnYCoordinate: 1
   _scaleOffset: 1
   _rotationIntensity: 0
-  _rayLength: 9
+  _rayLength: 10
   _rayColor: {r: 1, g: 0.3213007, b: 0, a: 1}
   _waitDuration: 1.5
 --- !u!61 &4994956140682793706
@@ -97,7 +97,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!1 &9160260232301047501
 GameObject:

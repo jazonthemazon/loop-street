@@ -36,8 +36,8 @@ public class Spawnable : MonoBehaviour
 
     protected virtual void Start()
     {
-        float startingScale = transform.localScale.x * _size;
-        transform.localScale = new(startingScale, startingScale, startingScale);
+        float startingScale = _spriteGameObject.transform.localScale.x * _size;
+        _spriteGameObject.transform.localScale = new(startingScale, startingScale, startingScale);
         ScaleForDistanceIllusion();
         RotateSpawnable();
 
@@ -71,7 +71,7 @@ public class Spawnable : MonoBehaviour
 
     protected virtual void Move()
     {
-        if (Vector2.Distance(transform.position, _nextWayPoint) < 0.2f)
+        if (Vector2.Distance(transform.position, _nextWayPoint) < 0.1f)
         {
             if (_nextWayPointIndex == _wayPoints.Count - 1)
             {
@@ -97,14 +97,14 @@ public class Spawnable : MonoBehaviour
     {
         if (!_scaleBasedOnYCoordinate) return;
 
-        float currentScale = (_scaleOffset - transform.position.y) * _size * 0.1f;
+        float currentScale = (_scaleOffset - _spriteGameObject.transform.position.y) * _size * 0.1f;
         currentScale = Mathf.Max(0, currentScale);
-        transform.localScale = new(currentScale, currentScale);
+        _spriteGameObject.transform.localScale = new(currentScale, currentScale);
     }
 
     private void RotateSpawnable()
     {
-        _spriteGameObject.transform.rotation = Quaternion.Euler(0, 0, -transform.position.x * _rotationIntensity);
+        _spriteGameObject.transform.rotation = Quaternion.Euler(0, 0, -_spriteGameObject.transform.position.x * _rotationIntensity);
     }
 
     protected virtual void UpdateAnimation()

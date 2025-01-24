@@ -4,7 +4,7 @@ using UnityEngine.Video;
 
 public class WindowVideoController : MonoBehaviour
 {
-    [SerializeField] [Range(0, 1)] private float _probabilityToPlayVideoPerHour;
+    [SerializeField][Range(0, 1)] private float _probabilityToPlayVideoPerHour;
 
     private List<VideoPlayer> videoPlayers;
 
