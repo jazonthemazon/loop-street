@@ -38,9 +38,9 @@ public class VideoRandomizer : MonoBehaviour
 
     private void ToggleVideo()
     {
-        if (Random.value > _probabilityPerHour) return;
         if (!_visible)
         {
+            if (Random.value > _probabilityPerHour) return;
             _visible = true;
             _videoPlayer.clip = _videoClips[Random.Range(0, _videoClips.Count)];
             StartCoroutine(Fade(1));

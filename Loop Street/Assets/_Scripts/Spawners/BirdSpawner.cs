@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class BirdSpawner : Spawner
 {
-    [SerializeField][Range(0, 1)] private float _spawnProbability;
     [SerializeField] private List<Vector2> _possibleRestSpots = new();
 
-    protected override void Spawn()
+    protected override void MaybeSpawn()
     {
         if (Random.value > _spawnProbability) return;
 

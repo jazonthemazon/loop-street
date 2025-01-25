@@ -4,7 +4,9 @@ using UnityEngine.Video;
 
 public class WindowVideoController : MonoBehaviour
 {
-    [SerializeField][Range(0, 1)] private float _probabilityToPlayVideoPerHour;
+    [SerializeField][Range(0, 1)] private float _probabilityToPlayVideoPerMinute;
+    [SerializeField][Range(0, 24)] private int _startTime;
+    [SerializeField][Range(0, 24)] private int _endTime;
 
     private List<VideoPlayer> videoPlayers;
 
@@ -21,7 +23,7 @@ public class WindowVideoController : MonoBehaviour
 
     private void OnEnable()
     {
-        Actions.OnHourChanged += MaybePlayVideoInOneWindow;
+        Actions.OnMinuteChanged += MaybePlayVideoInOneWindow;
         foreach (var player in videoPlayers)
         {
             player.loopPointReached += DisablePlayer;
@@ -30,7 +32,7 @@ public class WindowVideoController : MonoBehaviour
 
     private void OnDisable()
     {
-        Actions.OnHourChanged -= MaybePlayVideoInOneWindow;
+        Actions.OnMinuteChanged -= MaybePlayVideoInOneWindow;
         foreach (var player in videoPlayers)
         {
             player.loopPointReached -= DisablePlayer;
@@ -40,11 +42,16 @@ public class WindowVideoController : MonoBehaviour
     private void DisablePlayer(VideoPlayer player)
     {
         player.enabled = false;
+        SpriteRenderer renderer = player.gameObject.GetComponent<SpriteRenderer>();
+        Sprite tempSprite = renderer.sprite;
+        renderer.sprite = null;
+        renderer.sprite = tempSprite;
     }
 
     private void MaybePlayVideoInOneWindow()
     {
-        if (Random.value < _probabilityToPlayVideoPerHour)
+        if (TimeManager.Hour >= _endTime && TimeManager.Hour < _startTime) return;
+        if (Random.value < _probabilityToPlayVideoPerMinute)
         {
             VideoPlayer videoPlayer = videoPlayers[Random.Range(0, videoPlayers.Count)];
             videoPlayer.enabled = true;

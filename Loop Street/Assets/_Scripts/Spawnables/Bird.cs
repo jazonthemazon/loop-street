@@ -24,12 +24,12 @@ public class Bird : Spawnable
 
     private void OnEnable()
     {
-        Actions.OnHourChanged += FlyAway;
+        Actions.OnMinuteChanged += FlyAway;
     }
 
     private void OnDisable()
     {
-        Actions.OnHourChanged -= FlyAway;
+        Actions.OnMinuteChanged -= FlyAway;
     }
 
     protected override void Move()
