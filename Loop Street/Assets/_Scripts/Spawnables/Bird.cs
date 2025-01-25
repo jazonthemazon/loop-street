@@ -5,6 +5,12 @@ public class Bird : Spawnable
 {
     private bool _isSitting = false;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        _animator.SetInteger("RandomAnimation", Random.Range(0, 7));
+    }
+
     protected override void Start()
     {
         base.Start();

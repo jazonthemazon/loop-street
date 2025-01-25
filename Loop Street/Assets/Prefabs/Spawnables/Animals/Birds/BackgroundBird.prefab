@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _size: 1
+  _size: 0.25
   _scaleBasedOnYCoordinate: 0
   _scaleOffset: 0
   _rotationIntensity: 0
