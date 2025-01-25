@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ando3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 941
+        width: 236
+        height: 476
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525b0de0815907749ba73c15cde22e42
+      internalID: 1011663280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 941
+        width: 236
+        height: 476
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644c93c839a22c3498c586a2b0bfcb72
+      internalID: 1375292603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_2
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 939
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5404af1ed3272d42809934dace91dd2
+      internalID: -1759279825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_3
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 945
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92190dc4f07d4cf4488e7956bbaf2bfe
+      internalID: 1961995493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 236
+        height: 470
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00646c2cb2df68543987444f4e3f734f
+      internalID: 242792936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 473
+        width: 236
+        height: 466
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4448e8581698c4ab4c2d4bcb986cd9
+      internalID: -240102550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_6
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 473
+        width: 236
+        height: 468
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8a6ea2bfeec7a44a7b77b2a6b99062
+      internalID: -1341138249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_7
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 473
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c286149cd7d3d2c4081372bfd21a41cb
+      internalID: 1318954564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494dbf3e1076eb944a73e2795962878f
+      internalID: -298083148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_9
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e141dbe7c0ba44c9aea9b2c1f387d6
+      internalID: 1856816038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_10
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd0bd2c15ebce246a23fd01e1c0e80e
+      internalID: 894146061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ando3_11
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1
+        width: 236
+        height: 472
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beccd8a58c593ba4182c7df652e4db0e
+      internalID: -1970361321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +371,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ando3_0: 1011663280
+      ando3_1: 1375292603
+      ando3_10: 894146061
+      ando3_11: -1970361321
+      ando3_2: -1759279825
+      ando3_3: 1961995493
+      ando3_4: 242792936
+      ando3_5: -240102550
+      ando3_6: -1341138249
+      ando3_7: 1318954564
+      ando3_8: -298083148
+      ando3_9: 1856816038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
