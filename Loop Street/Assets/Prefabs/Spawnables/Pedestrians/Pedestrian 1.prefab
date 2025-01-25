@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2831531331673369354}
   m_Layer: 0
   m_Name: Pedestrian 1
-  m_TagString: Untagged
+  m_TagString: Pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,9 +52,8 @@ MonoBehaviour:
   _scaleOffset: 1
   _rotationIntensity: 3
   _rayLength: 1
-  _rayColor: {r: 1, g: 0, b: 0, a: 0}
-  _waitDuration: 0
-  _chanceForWeirdness: 0.1
+  _rayColor: {r: 1, g: 0, b: 0, a: 1}
+  _chanceForWeirdness: 0.05
   _weirdBig: 7
   _weirdSmall: 0.25
 --- !u!61 &2831531331673369354

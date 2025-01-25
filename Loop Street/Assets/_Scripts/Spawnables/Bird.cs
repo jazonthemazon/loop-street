@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : Spawnable
@@ -11,6 +9,11 @@ public class Bird : Spawnable
     {
         base.Start();
         StartMoving();
+    }
+
+    protected override bool RaycastHit()
+    {
+        return false;
     }
 
     private void OnEnable()

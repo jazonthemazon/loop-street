@@ -152,10 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _wayPoints: []
-  _size: 1
+  _size: 0.7
+  _scaleBasedOnYCoordinate: 0
   _scaleOffset: 0
-  _scalingMultiplier: 0
   _rotationIntensity: 0
   _rayLength: 0
   _rayColor: {r: 0, g: 0, b: 0, a: 0}

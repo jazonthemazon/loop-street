@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3249152500936014005}
-  - component: {fileID: 8570998875624325692}
+  - component: {fileID: 6620423675830464338}
   m_Layer: 0
   m_Name: BackgroundBird
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 6857000137695024970}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8570998875624325692
+--- !u!114 &6620423675830464338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,15 +148,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8018335797819905778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bceb0176485fbb143b0ab553ca91bb97, type: 3}
+  m_Script: {fileID: 11500000, guid: 84e2232fd222a224fb65e9e35697ad4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 6
-  _wayPoints: []
-  _size: 0.3
+  _speed: 3
+  _size: 1
   _scaleBasedOnYCoordinate: 0
-  _scaleOffset: 5
+  _scaleOffset: 0
   _rotationIntensity: 0
   _rayLength: 0
   _rayColor: {r: 0, g: 0, b: 0, a: 0}
-  _waitDuration: 0

@@ -24,4 +24,24 @@ public class Pedestrian : Spawnable
             }
         }
     }
+
+    protected override bool RaycastHit()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _movementDirection, _currentRayLength);
+
+        if (hit)
+        {
+            if (hit.collider.gameObject.TryGetComponent<CrossingManager>(out CrossingManager crossingManager))
+            {
+                crossingManager.SetPedestriansOnCrossing();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

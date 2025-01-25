@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawnable : MonoBehaviour
+public abstract class Spawnable : MonoBehaviour
 {
     [Header("Speed")]
     [SerializeField] protected float _speed;
@@ -13,10 +13,10 @@ public class Spawnable : MonoBehaviour
     [SerializeField] protected float _rotationIntensity;
 
     [Header("Raycast Variables")]
-    [SerializeField] private float _rayLength;
-    [SerializeField] private Color _rayColor;
-    [SerializeField] private float _waitDuration;
+    [SerializeField] protected float _rayLength;
+    [SerializeField] protected Color _rayColor;
 
+    protected float _currentRayLength;
     protected GameObject _spriteGameObject;
     protected SpriteRenderer _spriteRenderer;
     protected Animator _animator;
@@ -25,7 +25,6 @@ public class Spawnable : MonoBehaviour
     protected List<Vector2> _wayPoints;
     protected Vector2 _nextWayPoint;
     protected int _nextWayPointIndex;
-    protected float _cooldownCounter;
 
     protected virtual void Awake()
     {
@@ -44,30 +43,28 @@ public class Spawnable : MonoBehaviour
         _previousPosition = transform.position;
         _nextWayPointIndex = 1;
         _nextWayPoint = _wayPoints[_nextWayPointIndex];
-        _cooldownCounter = 0f;
     }
 
     private void Update()
     {
-        RaycastHit2D hit = (Physics2D.Raycast(transform.position, _movementDirection, _rayLength * transform.localScale.x));
 
-        if (hit)
+
+        if (RaycastHit())
         {
-            _cooldownCounter = _waitDuration;
             return;
         }
-        else if (_cooldownCounter == 0f)
+        else
         {
             Move();
             ScaleForDistanceIllusion();
             RotateSpawnable();
             UpdateAnimation();
         }
-        else
-        {
-            _cooldownCounter = Mathf.Max(_cooldownCounter - Time.deltaTime, 0);
-        }
+
+        _currentRayLength = _rayLength * Mathf.Abs(1 - Mathf.Abs(_movementDirection.y));
     }
+
+    protected abstract bool RaycastHit();
 
     protected virtual void Move()
     {
@@ -151,6 +148,6 @@ public class Spawnable : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = _rayColor;
-        Gizmos.DrawLine(transform.position, transform.position + (Vector3)_movementDirection * _rayLength * transform.localScale.x);
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)_movementDirection * _currentRayLength);
     }
 }
