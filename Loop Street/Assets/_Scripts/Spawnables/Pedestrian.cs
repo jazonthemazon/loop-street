@@ -10,7 +10,7 @@ public class Pedestrian : Spawnable
     protected override void Awake()
     {
         base.Awake();
-        _animator.SetInteger("RandomAnimation", Random.Range(0, 3));
+        _animator.SetInteger("RandomAnimation", Random.Range(0, 12));
 
         if (Random.value < _chanceForWeirdness)
         {
