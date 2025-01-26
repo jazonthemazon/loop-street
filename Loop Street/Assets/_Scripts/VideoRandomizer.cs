@@ -43,6 +43,7 @@ public class VideoRandomizer : MonoBehaviour
             if (Random.value > _probabilityPerHour) return;
             _visible = true;
             _videoPlayer.clip = _videoClips[Random.Range(0, _videoClips.Count)];
+            _videoPlayer.Play();
             StartCoroutine(Fade(1));
         }
         else

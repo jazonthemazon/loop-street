@@ -17,12 +17,12 @@ public class Spawner : MonoBehaviour
     protected int _currentCooldown = 0;
     protected List<Vector2> _currentPath;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         Actions.OnMinuteChanged += MaybeSpawn;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         Actions.OnMinuteChanged -= MaybeSpawn;
     }

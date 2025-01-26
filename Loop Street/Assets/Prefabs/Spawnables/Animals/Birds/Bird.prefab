@@ -158,4 +158,6 @@ MonoBehaviour:
   _rotationIntensity: 0
   _rayLength: 0
   _rayColor: {r: 0, g: 0, b: 0, a: 0}
-  _waitDuration: 0
+  _flyAwayProbabilityPerMinute: 0.15
+  _landEase: 3
+  _flyAwayEase: 2

@@ -8,6 +8,7 @@ public class DayNightCycleController : MonoBehaviour
     [SerializeReference] private GameObject _housesAtNight;
     [SerializeReference] private GameObject _houseAtNight;
     [SerializeReference] private GameObject _streetLights;
+    [SerializeReference] private GameObject _windows;
 
     [Header("Street Lights")]
     [SerializeField] float _streetLightsSwitchDarkness;
@@ -113,5 +114,10 @@ public class DayNightCycleController : MonoBehaviour
         _streetAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
         _housesAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
         _houseAtNight.GetComponent<SpriteRenderer>().color = _nightColor;
+
+        for (int x = 0; x < _windows.transform.childCount; x++)
+        {
+            _windows.transform.GetChild(x).GetComponent<SpriteRenderer>().color = _nightColor;
+        }
     } 
 }
