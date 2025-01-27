@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startHour: 0
-  _minutesPerSecond: 9
+  _minutesPerSecond: 20
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6620423675830464338, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _spawnProbability: 0.1
+  _spawnProbability: 0.075
   _paths:
   - Waypoints:
     - {x: 2, y: 4.5}
@@ -2534,6 +2534,8 @@ MonoBehaviour:
     - {x: -12, y: 1.5}
   _showGizmos: 0
   _gizmoColor: {r: 1, g: 0.830045, b: 0, a: 1}
+  _beginningHour: 5
+  _endHour: 19
 --- !u!1 &622432611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,6 +3639,8 @@ MonoBehaviour:
   - {x: 9.21, y: -0.07}
   - {x: -1.93, y: 0.38}
   - {x: -7.5, y: -1.38}
+  _beginningHour: 5
+  _endHour: 19
 --- !u!1 &936042564
 GameObject:
   m_ObjectHideFlags: 0

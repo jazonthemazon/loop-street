@@ -5,9 +5,12 @@ using UnityEngine;
 public class BirdSpawner : Spawner
 {
     [SerializeField] private List<Vector2> _possibleRestSpots = new();
+    [SerializeField] private int _beginningHour;
+    [SerializeField] private int _endHour;
 
     protected override void MaybeSpawn()
     {
+        if (TimeManager.Hour < _beginningHour || TimeManager.Hour >= _endHour) return;
         if (Random.value > _spawnProbability) return;
 
         _currentPath = new();
