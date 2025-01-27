@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startHour: 0
-  _minutesPerSecond: 2
+  _minutesPerSecond: 9
 --- !u!114 &108159047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d779d1dada386ae48bb33aef1fe3f530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _probabilityToPlayVideoPerMinute: 0.04
+  _probabilityToPlayVideoPerMinute: 0.03
   _startTime: 18
   _endTime: 7
 --- !u!1 &248979949
