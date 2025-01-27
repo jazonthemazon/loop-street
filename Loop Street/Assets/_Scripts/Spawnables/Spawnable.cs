@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,18 +44,20 @@ public abstract class Spawnable : MonoBehaviour
         _previousPosition = transform.position;
         _nextWayPointIndex = 1;
         _nextWayPoint = _wayPoints[_nextWayPointIndex];
+
+        if (RaycastHit()) Destroy(this.gameObject);
     }
 
     private void Update()
     {
-
-
         if (RaycastHit())
         {
+            _animator.speed = 0;
             return;
         }
         else
         {
+            _animator.speed = 1;
             Move();
             ScaleForDistanceIllusion();
             RotateSpawnable();

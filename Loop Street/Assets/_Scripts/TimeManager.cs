@@ -5,7 +5,8 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private float _minutesPerSecond = 1f;
+    [SerializeField] private int _startHour;
+    [SerializeField] private float _minutesPerSecond;
 
     public static int Minute { get; private set; }
     public static int Hour { get; private set; }
@@ -16,7 +17,7 @@ public class TimeManager : MonoBehaviour
     void Start()
     {
         Minute = 0;
-        Hour = 0;
+        Hour = _startHour;
         Day = 1;
         _timer = 1 / _minutesPerSecond;
     }

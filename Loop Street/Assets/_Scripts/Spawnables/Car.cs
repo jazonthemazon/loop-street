@@ -5,7 +5,7 @@ public class Car : Spawnable
     protected override void Awake()
     {
         base.Awake();
-        _animator.SetInteger("RandomAnimation", Random.Range(0, 5));
+        _animator.SetInteger("RandomAnimation", Random.Range(0, 7));
     }
 
     protected override bool RaycastHit()
