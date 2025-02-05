@@ -10,13 +10,24 @@ public class Pedestrian : Spawnable
     protected override void Awake()
     {
         base.Awake();
-        int randomNumber = Random.Range(0, 17);
+        int randomNumber;
+
+        if (DayNightCycleController.CatastropheIsHappening)
+        {
+            randomNumber = Random.Range(16, 17);
+        }
+        else
+        {
+            randomNumber = Random.Range(0, 17);
+        }
+
         _animator.SetInteger("RandomAnimation", randomNumber);
+
         if (randomNumber >= 12) _rotationIntensity = 0f;
 
         if (Random.value < _chanceForWeirdness)
         {
-            if (Random.Range(0, 2) == 0)
+            if (Random.value < 0.5f)
             {
                 _size = _weirdBig;
             }

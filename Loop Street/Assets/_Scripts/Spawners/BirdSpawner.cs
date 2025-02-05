@@ -11,7 +11,7 @@ public class BirdSpawner : Spawner
     protected override void MaybeSpawn()
     {
         if (TimeManager.Hour < _beginningHour || TimeManager.Hour >= _endHour) return;
-        if (Random.value > _spawnProbability) return;
+        if (Random.value > SpawnProbability) return;
 
         _currentPath = new();
 

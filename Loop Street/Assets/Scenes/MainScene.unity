@@ -326,6 +326,9 @@ MonoBehaviour:
   _sunsetBeginning: 17
   _sunsetEnd: 21
   _nightColor: {r: 1, g: 1, b: 1, a: 0}
+  _catastropheChancePerHour: 0.5
+  _catastropheSpawnChance: 1
+  _pedestrianSpawner: {fileID: 249224423}
 --- !u!1 &110299318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
-  _spawnProbability: 0.01
+  SpawnProbability: 0.01
   _paths:
   - Waypoints:
     - {x: -12, y: -3.2}
@@ -2847,7 +2850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6620423675830464338, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  _spawnProbability: 0.075
+  SpawnProbability: 0.02
   _paths:
   - Waypoints:
     - {x: 2, y: 4.5}
@@ -3966,7 +3969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
-  _spawnProbability: 0.075
+  SpawnProbability: 0.02
   _paths: []
   _showGizmos: 0
   _gizmoColor: {r: 1, g: 0, b: 0, a: 1}
@@ -4745,7 +4748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
-  _spawnProbability: 0.1
+  SpawnProbability: 0.03
   _paths:
   - Waypoints:
     - {x: -12, y: -5.3}

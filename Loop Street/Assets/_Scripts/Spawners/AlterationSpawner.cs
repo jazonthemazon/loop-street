@@ -23,11 +23,11 @@ public class AlterationSpawner : Spawner
     {
         if (TimeManager.Hour == _beginningHour)
         {
-            _spawnProbability *= _spawnrateAlteration;
+            SpawnProbability *= _spawnrateAlteration;
         }
         else if (TimeManager.Hour == _endHour)
         {
-            _spawnProbability *= 1 / _spawnrateAlteration;
+            SpawnProbability *= 1 / _spawnrateAlteration;
         }
     }
 }

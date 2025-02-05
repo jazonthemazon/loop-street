@@ -22,6 +22,14 @@ public class DayNightCycleController : MonoBehaviour
     [Header("Current Alpha")]
     [SerializeField] private Color _nightColor;
 
+    [Header("Random Events")]
+    [SerializeField][Range(0, 1)] private float _catastropheChancePerHour;
+    [SerializeField][Range(0, 1)] private float _catastropheSpawnChance;
+    public static bool CatastropheIsHappening = false;
+    [SerializeField] private AlterationSpawner _pedestrianSpawner;
+
+    private float _initialSpawnChance;
+
     private float _alphaChangePerMinute = 0f;
 
     private void OnEnable()
@@ -42,6 +50,7 @@ public class DayNightCycleController : MonoBehaviour
         _nightColor.a = 1;
 
         UpdateSpritesColor();
+        _initialSpawnChance = _pedestrianSpawner.SpawnProbability;
     }
 
     private void HourChange()
@@ -61,6 +70,18 @@ public class DayNightCycleController : MonoBehaviour
         else if (TimeManager.Hour == _sunsetEnd)
         {
             EndSunset();
+        }
+
+        if (CatastropheIsHappening)
+        {
+            CatastropheIsHappening = false;
+            _pedestrianSpawner.SpawnProbability = _initialSpawnChance;
+        }
+
+        if (Random.value < _catastropheChancePerHour)
+        {
+            CatastropheIsHappening = true;
+            _pedestrianSpawner.SpawnProbability = _catastropheSpawnChance;
         }
     }
 

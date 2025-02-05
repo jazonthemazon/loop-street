@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class TimeManager : MonoBehaviour
 {
@@ -21,6 +18,7 @@ public class TimeManager : MonoBehaviour
         Day = 1;
         _timer = 1 / _minutesPerSecond;
     }
+
     void Update()
     {
         _timer -= Time.deltaTime;

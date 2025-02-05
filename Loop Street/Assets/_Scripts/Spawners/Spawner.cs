@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour
 {
     [Header("Spawnable")]
     [SerializeField] protected Spawnable _spawnablePrefab;
-    [SerializeField][Range(0, 1)] protected float _spawnProbability;
+    [Range(0, 1)] public float SpawnProbability;
 
     [Header("Paths")]
     [SerializeField] protected List<Path> _paths;
@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
 
     protected virtual void MaybeSpawn()
     {
-        if (Random.value > _spawnProbability) return;
+        if (Random.value > SpawnProbability) return;
 
         _currentPath = _paths[Random.Range(0, _paths.Count)].Waypoints;
         Spawnable spawnable = Instantiate(_spawnablePrefab, _currentPath[0], Quaternion.identity);

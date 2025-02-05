@@ -53,7 +53,7 @@ MonoBehaviour:
   _rotationIntensity: 3
   _rayLength: 1
   _rayColor: {r: 1, g: 0, b: 0, a: 1}
-  _chanceForWeirdness: 0.04
+  _chanceForWeirdness: 0.12
   _weirdBig: 7
   _weirdSmall: 0.25
 --- !u!61 &2831531331673369354
