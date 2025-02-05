@@ -3433,7 +3433,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -4911,7 +4911,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e6bd88b9b72883948990b002c92856be, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f241cad64834c2643a84df1042a2201c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
