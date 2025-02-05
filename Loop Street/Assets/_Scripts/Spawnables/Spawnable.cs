@@ -71,8 +71,9 @@ public abstract class Spawnable : MonoBehaviour
 
     protected virtual void Move()
     {
-        if (Vector2.Distance(transform.position, _nextWayPoint) < 0.1f)
+        if (Vector2.Distance(transform.position, _nextWayPoint) < 0.3f)
         {
+            transform.position = _nextWayPoint;
             if (_nextWayPointIndex == _wayPoints.Count - 1)
             {
                 Destroy(gameObject);
