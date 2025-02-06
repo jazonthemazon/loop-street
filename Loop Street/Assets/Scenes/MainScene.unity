@@ -326,9 +326,14 @@ MonoBehaviour:
   _sunsetBeginning: 17
   _sunsetEnd: 21
   _nightColor: {r: 1, g: 1, b: 1, a: 0}
-  _catastropheChancePerHour: 0.5
-  _catastropheSpawnChance: 1
+  _catastropheChancePerHour: 0.05
+  _catastropheSpawnChance: 0.8
   _pedestrianSpawner: {fileID: 249224423}
+  _manyPeopleChancePerHour: 0.05
+  _manyPeopleSpawnChance: 0.8
+  _manyCarsChancePerHour: 0.05
+  _manyCarsSpawnChance: 0.8
+  _carSpawner: {fileID: 1192292114}
 --- !u!1 &110299318
 GameObject:
   m_ObjectHideFlags: 0

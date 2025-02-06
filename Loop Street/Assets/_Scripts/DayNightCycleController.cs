@@ -23,12 +23,25 @@ public class DayNightCycleController : MonoBehaviour
     [SerializeField] private Color _nightColor;
 
     [Header("Random Events")]
+    [Header("Catastrophe")]
     [SerializeField][Range(0, 1)] private float _catastropheChancePerHour;
     [SerializeField][Range(0, 1)] private float _catastropheSpawnChance;
     public static bool CatastropheIsHappening = false;
     [SerializeField] private AlterationSpawner _pedestrianSpawner;
 
-    private float _initialSpawnChance;
+    [Header("ManyPeople")]
+    [SerializeField][Range(0, 1)] private float _manyPeopleChancePerHour;
+    [SerializeField][Range(0, 1)] private float _manyPeopleSpawnChance;
+    public static bool ManyPeopleIsHappening = false;
+
+    [Header("ManyCars")]
+    [SerializeField][Range(0, 1)] private float _manyCarsChancePerHour;
+    [SerializeField][Range(0, 1)] private float _manyCarsSpawnChance;
+    public static bool ManyCarsIsHappening = false;
+    [SerializeField] private AlterationSpawner _carSpawner;
+
+    private float _initialPedestrianSpawnChance;
+    private float _initialCarSpawnChance;
 
     private float _alphaChangePerMinute = 0f;
 
@@ -44,13 +57,14 @@ public class DayNightCycleController : MonoBehaviour
         Actions.OnMinuteChanged -= UpdateAlpha;
     }
 
-    void Start()
+    private void Start()
     {
         _nightColor = _streetAtNight.GetComponent<SpriteRenderer>().color;
         _nightColor.a = 1;
 
         UpdateSpritesColor();
-        _initialSpawnChance = _pedestrianSpawner.SpawnProbability;
+        _initialPedestrianSpawnChance = _pedestrianSpawner.SpawnProbability;
+        _initialCarSpawnChance = _carSpawner.SpawnProbability;
     }
 
     private void HourChange()
@@ -75,13 +89,34 @@ public class DayNightCycleController : MonoBehaviour
         if (CatastropheIsHappening)
         {
             CatastropheIsHappening = false;
-            _pedestrianSpawner.SpawnProbability = _initialSpawnChance;
+            _pedestrianSpawner.SpawnProbability = _initialPedestrianSpawnChance;
         }
-
         if (Random.value < _catastropheChancePerHour)
         {
             CatastropheIsHappening = true;
             _pedestrianSpawner.SpawnProbability = _catastropheSpawnChance;
+        }
+
+        if (ManyPeopleIsHappening)
+        {
+            ManyPeopleIsHappening = false;
+            _pedestrianSpawner.SpawnProbability = _initialPedestrianSpawnChance;
+        }
+        if (Random.value < _manyPeopleChancePerHour)
+        {
+            ManyPeopleIsHappening = true;
+            _pedestrianSpawner.SpawnProbability = _manyPeopleSpawnChance;
+        }
+
+        if (ManyCarsIsHappening)
+        {
+            ManyCarsIsHappening = false;
+            _carSpawner.SpawnProbability = _initialCarSpawnChance;
+        }
+        if (Random.value < _manyCarsChancePerHour)
+        {
+            ManyCarsIsHappening = true;
+            _carSpawner.SpawnProbability = _manyCarsSpawnChance;
         }
     }
 
@@ -140,5 +175,5 @@ public class DayNightCycleController : MonoBehaviour
         {
             _windows.transform.GetChild(x).GetComponent<SpriteRenderer>().color = _nightColor;
         }
-    } 
+    }
 }
