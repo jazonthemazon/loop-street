@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,14 +12,14 @@ public class BirdSpawner : Spawner
         if (TimeManager.Hour < _beginningHour || TimeManager.Hour >= _endHour) return;
         if (Random.value > SpawnProbability) return;
 
-        _currentPath = new();
-
-        _currentPath.Add(PointOnLeftOrRightOfScreen());
-
         int randomNumber = Random.Range(0, _possibleRestSpots.Count);
-        _currentPath.Add(_possibleRestSpots[randomNumber]);
 
-        _currentPath.Add(PointOnLeftOrRightOfScreen());
+        _currentPath = new()
+        {
+            PointOnLeftOrRightOfScreen(),
+            _possibleRestSpots[randomNumber],
+            PointOnLeftOrRightOfScreen()
+        };
 
         Spawnable spawnable = Instantiate(_spawnablePrefab, _currentPath[0], Quaternion.identity);
         spawnable.SetWaypoints(_currentPath);
@@ -31,7 +30,7 @@ public class BirdSpawner : Spawner
         float screenHeight = Camera.main.orthographicSize * 2;
         float screenWidth = screenHeight * (16f / 9f) + 1f;
         bool onTheRight = Random.value < 0.5f;
-        
+
         if (!onTheRight)
         {
             return new(Random.Range(-screenWidth, -screenWidth * 0.5f), Random.Range(0f, screenHeight * 0.5f));
@@ -42,10 +41,8 @@ public class BirdSpawner : Spawner
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        if (!_showGizmos) return;
-
         Gizmos.color = _gizmoColor;
         foreach (Vector2 point in _possibleRestSpots)
         {

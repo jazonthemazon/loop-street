@@ -39,7 +39,7 @@ public class Bird : Spawnable
 
     protected override void Move()
     {
-        
+
     }
 
     private void StartMoving()
@@ -65,5 +65,25 @@ public class Bird : Spawnable
                 Destroy(gameObject);
             });
         }
+    }
+
+    protected override void UpdateAnimation()
+    {
+        if (_isSitting) return;
+
+        Vector2 currentPosition = transform.position;
+        _movementDirection = currentPosition - _previousPosition;
+        _movementDirection.Normalize();
+
+        if (_movementDirection.x < 0)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else if (_movementDirection.x > 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
+
+        _previousPosition = currentPosition;
     }
 }

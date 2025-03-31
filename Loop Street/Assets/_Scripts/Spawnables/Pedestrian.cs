@@ -57,4 +57,16 @@ public class Pedestrian : Spawnable
 
         return false;
     }
+
+    void LateUpdate()
+    {
+        if (transform.position.y > -2.5f)
+        {
+            _spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+        }
+        else
+        {
+            _spriteRenderer.maskInteraction = SpriteMaskInteraction.None;
+        }
+    }
 }

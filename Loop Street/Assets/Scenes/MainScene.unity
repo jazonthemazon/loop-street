@@ -1175,21 +1175,20 @@ MonoBehaviour:
     - {x: -1, y: -3.2}
     - {x: 0.2, y: 0.5}
   - Waypoints:
-    - {x: 12, y: -2.8}
-    - {x: -12, y: -2.8}
+    - {x: 12, y: -2.85}
+    - {x: -12, y: -2.85}
   - Waypoints:
-    - {x: 12, y: -2.8}
-    - {x: -0.9, y: -2.8}
+    - {x: 12, y: -2.85}
+    - {x: -0.9, y: -2.85}
     - {x: 0.2, y: 0.5}
   - Waypoints:
     - {x: -0.4, y: 0.5}
-    - {x: -4.85, y: -2.8}
-    - {x: -12, y: -2.8}
+    - {x: -4.85, y: -2.85}
+    - {x: -12, y: -2.85}
   - Waypoints:
     - {x: -0.4, y: 0.5}
     - {x: -5.4, y: -3.2}
     - {x: 12, y: -3.2}
-  _showGizmos: 0
   _gizmoColor: {r: 0, g: 1, b: 0.043137256, a: 1}
   _spawnrateAlteration: 8
   _beginningHour: 8
@@ -1347,6 +1346,7 @@ Transform:
   - {fileID: 834550799}
   - {fileID: 1241984315}
   - {fileID: 1614063235}
+  - {fileID: 988787807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &299664450
@@ -2878,7 +2878,6 @@ MonoBehaviour:
   - Waypoints:
     - {x: 2, y: 1.5}
     - {x: -12, y: 1.5}
-  _showGizmos: 0
   _gizmoColor: {r: 1, g: 0.830045, b: 0, a: 1}
   _beginningHour: 5
   _endHour: 19
@@ -3976,7 +3975,6 @@ MonoBehaviour:
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
   SpawnProbability: 0.02
   _paths: []
-  _showGizmos: 0
   _gizmoColor: {r: 1, g: 0, b: 0, a: 1}
   _possibleRestSpots:
   - {x: -4.33, y: 0.36}
@@ -3985,7 +3983,7 @@ MonoBehaviour:
   - {x: 9.21, y: -0.07}
   - {x: -1.93, y: 0.38}
   - {x: -7.5, y: -1.38}
-  _beginningHour: 5
+  _beginningHour: 0
   _endHour: 19
 --- !u!1 &936042564
 GameObject:
@@ -4220,6 +4218,89 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1312340694}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &988787805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988787807}
+  - component: {fileID: 988787806}
+  m_Layer: 0
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!331 &988787806
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988787805}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &988787807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988787805}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.62, y: 1.5, z: 0}
+  m_LocalScale: {x: 10, y: 8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 298673403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000557225
 GameObject:
@@ -4769,7 +4850,6 @@ MonoBehaviour:
     - {x: -0.2, y: 0.5}
     - {x: -4.8, y: -4.3}
     - {x: -12, y: -4.3}
-  _showGizmos: 0
   _gizmoColor: {r: 0, g: 1, b: 0.9960785, a: 1}
   _spawnrateAlteration: 4
   _beginningHour: 8

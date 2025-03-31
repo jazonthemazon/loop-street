@@ -11,7 +11,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] protected List<Path> _paths;
 
     [Header("Gizmos")]
-    [SerializeField] protected bool _showGizmos;
     [SerializeField] protected Color _gizmoColor;
 
     protected int _currentCooldown = 0;
@@ -36,9 +35,9 @@ public class Spawner : MonoBehaviour
         spawnable.SetWaypoints(_currentPath);
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        if (!_showGizmos || _paths.Count == 0) return;
+        if (_paths.Count == 0) return;
 
         foreach (Path path in _paths)
         {
