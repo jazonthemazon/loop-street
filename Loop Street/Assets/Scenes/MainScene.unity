@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: -1584230422495957920, guid: fe344f919b629f7498a4acf44f2e6252, type: 3}
-  SpawnProbability: 0.01
+  SpawnProbability: 0.02
   _paths:
   - Waypoints:
     - {x: -12, y: -3.2}
@@ -2855,7 +2855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6620423675830464338, guid: c12640d2f7d4b294cb374ee47d24725a, type: 3}
-  SpawnProbability: 0.02
+  SpawnProbability: 0.04
   _paths:
   - Waypoints:
     - {x: 2, y: 4.5}
@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 5226429647050542193, guid: 8ab50dfad5a1ca24b9d40b8187533033, type: 3}
-  SpawnProbability: 0.02
+  SpawnProbability: 0.04
   _paths: []
   _gizmoColor: {r: 1, g: 0, b: 0, a: 1}
   _possibleRestSpots:
@@ -3983,7 +3983,7 @@ MonoBehaviour:
   - {x: 9.21, y: -0.07}
   - {x: -1.93, y: 0.38}
   - {x: -7.5, y: -1.38}
-  _beginningHour: 0
+  _beginningHour: 5
   _endHour: 19
 --- !u!1 &936042564
 GameObject:
@@ -4834,7 +4834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnablePrefab: {fileID: 6875080830649756078, guid: 2baa79ccd87dfa64a8c10b5bb2379dbb, type: 3}
-  SpawnProbability: 0.03
+  SpawnProbability: 0.06
   _paths:
   - Waypoints:
     - {x: -12, y: -5.3}
@@ -7903,7 +7903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2070054531
 RectTransform:
   m_ObjectHideFlags: 0
