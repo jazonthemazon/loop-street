@@ -6394,21 +6394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _videoClips:
-  - {fileID: 32900000, guid: 58ca01a270155a042b33a803a49ab566, type: 3}
-  - {fileID: 32900000, guid: 0336cf592d80f3b4cba8dd04ae61ab3d, type: 3}
-  - {fileID: 32900000, guid: 62bfa268b129d9240bd97bfa2d94e2ca, type: 3}
-  - {fileID: 32900000, guid: dd927b669bdabf04eb34accc72ecc219, type: 3}
-  - {fileID: 32900000, guid: 56d583c766dcc30408e59d52aef02833, type: 3}
-  - {fileID: 32900000, guid: 80198e94b259bb840afcfe0667143fab, type: 3}
-  - {fileID: 32900000, guid: 8dfee14116d8271489bf28abc518b5ba, type: 3}
-  - {fileID: 32900000, guid: 23fe6bcd18828f54583718ee033dc0e0, type: 3}
-  - {fileID: 32900000, guid: 0fceeeb0894d5ee44bcf209036d51612, type: 3}
-  - {fileID: 32900000, guid: d5c771bda9ef3a040ab70bc95a5fb72d, type: 3}
-  - {fileID: 32900000, guid: 9a2d68225b346644981a51d6bd62f27f, type: 3}
-  - {fileID: 32900000, guid: 48747889effe52e4091374894ad49417, type: 3}
-  - {fileID: 32900000, guid: fb2899ab91c956e4f832c36800b44988, type: 3}
-  - {fileID: 32900000, guid: 3366131ecb7b5704db37d7c01e066688, type: 3}
-  - {fileID: 32900000, guid: 7bd6350f2b7d2dc4dad5c5b6ce90a150, type: 3}
+  - {fileID: 32900000, guid: a65769c3b1d09c5479b053811bc67864, type: 3}
+  - {fileID: 32900000, guid: 476c596645de62747b0bb819f8f43fb1, type: 3}
+  - {fileID: 32900000, guid: 424f55a02527d3840a3a42b385ccf5ca, type: 3}
+  - {fileID: 32900000, guid: 0f5474889824af549bf04b5d0984e2ce, type: 3}
   _probabilityPerHour: 0.2
   _fadeDuration: 10
 --- !u!328 &1574105814
@@ -7903,7 +7892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2070054531
 RectTransform:
   m_ObjectHideFlags: 0
